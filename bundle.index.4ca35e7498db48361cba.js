@@ -137,7 +137,7 @@
       }
       Object(r.C)(Object(o.a)("Restored UI"));
     }
-
+	// ---- LOAD/SAVE HUD DATA ON RR'S BROWSER ----
     function Z(e) {
       try {
         if (((Y = JSON.parse(e)), !Object(i.a)(Y))) return;
@@ -3936,6 +3936,7 @@
           Engine: "Motor",
           "Engine Braking:": "Motor-Bremse:",
           "Engine Map:": "Motor-Stufe:",
+		  "ABS:": "ABS:",
           English: "Englisch",
           "Est. Pos": "Vorauss. Position",
           "Est. Time": "Vorauss. Zeit",
@@ -4227,6 +4228,7 @@
           Engine: "Engine",
           "Engine Braking:": "Engine Braking:",
           "Engine Map:": "Engine Map:",
+		  "ABS:": "ABS:",
           English: "English",
           "Est. Pos": "Est. Pos",
           "Est. Time": "Est. Time",
@@ -4518,6 +4520,7 @@
           Engine: "Moteur",
           "Engine Braking:": "Frein Moteur:",
           "Engine Map:": "Cartographie Moteur:",
+		  "ABS:": "ABS:",
           English: "Anglais",
           "Est. Pos": "Pos. Est.",
           "Est. Time": "Temps Est.",
@@ -4809,6 +4812,7 @@
           Engine: "Motor",
           "Engine Braking:": "Trava de motor:",
           "Engine Map:": "Mapa do motor:",
+		  "ABS:": "ABS:",
           English: "Inglês",
           "Est. Pos": "Pos. Est.",
           "Est. Time": "Tempo Est.",
@@ -5100,6 +5104,7 @@
           Engine: "Motore",
           "Engine Braking:": "Freno motore:",
           "Engine Map:": "Mappa motore:",
+		  "ABS:": "ABS:",
           English: "Inglese",
           "Est. Pos": "Pos. stim.",
           "Est. Time": "Tempo stim.",
@@ -5391,6 +5396,7 @@
           Engine: "Motor",
           "Engine Braking:": "Freno Motor:",
           "Engine Map:": "Mapa Motor",
+		  "ABS:": "ABS:",
           English: "Inglés",
           "Est. Pos": "Pos. Est.",
           "Est. Time": "Tiempo Est.",
@@ -5682,6 +5688,7 @@
           Engine: "Silnik",
           "Engine Braking:": "Hamowanie Silnikiem:",
           "Engine Map:": "Mapa silnika:",
+		  "ABS:": "ABS:",
           English: "Angielski",
           "Est. Pos": "Szac. Pozycja",
           "Est. Time": "Szac. Czas",
@@ -9453,6 +9460,41 @@
             },
           },
         },
+		12419: {
+          Name: "AVUS",
+          Layouts: {
+            12500: {
+              Name: "1994",
+              BoxEntrance: 2340,
+            },
+            12420: {
+              Name: "1998",
+              BoxEntrance: 2345,
+            },
+          },
+        },
+		12936: {
+          Name: "Alemanenring",
+          Layouts: {
+            12938: {
+              Name: "Full Circuit",
+              BoxEntrance: 2506.000,
+            },
+          },
+        },
+		10393: {
+          Name: "Donington Park",
+          Layouts: {
+            10394: {
+              Name: "Grand Prix",
+              BoxEntrance: 3864,
+            },
+            10725: {
+              Name: "National",
+              BoxEntrance: 3062,
+            },
+          },
+        },
 		10462: {
           Name: "Interlagos",
           Layouts: {
@@ -9603,143 +9645,110 @@
                       } else if (1846 === e) {
                         if (6001 <= t || t <= 157) return "Start-Finish";
                         if (158 <= t && t <= 334) return "Hell Corner";
-                        if (350 <= t && t <= 1150)
-                          return "Mountain Straight";
-                        if (1230 <= t && t <= 1560)
-                          return "Griffins Bend";
+                        if (350 <= t && t <= 1150) return "Mountain Straight";
+                        if (1230 <= t && t <= 1560) return "Griffins Bend";
                         if (1650 <= t && t <= 1940) return "The Cutting";
-                        if (2060 <= t && t <= 2260)
-                          return "Quarry Corner";
+                        if (2060 <= t && t <= 2260) return "Quarry Corner";
                         if (2261 <= t && t <= 2360) return "Reid Park";
                         if (2361 <= t && t <= 2480) return "Frog Hollow";
                         if (2481 <= t && t <= 2660) return "Sulman Park";
-                        if (2730 <= t && t <= 2930)
-                          return "McPhillamy Park";
+                        if (2730 <= t && t <= 2930) return "McPhillamy Park";
                         if (2931 <= t && t <= 3110) return "Skyline";
                         if (3111 <= t && t <= 3635) return "The Esses";
                         if (3636 <= t && t <= 3830) return "The Dipper";
-                        if (3890 <= t && t <= 4020)
-                          return "Forrest´s Elbow";
-                        if (4070 <= t && t <= 4985)
-                          return "Conrod Straight";
+                        if (3890 <= t && t <= 4020) return "Forrest´s Elbow";
+                        if (4070 <= t && t <= 4985) return "Conrod Straight";
                         if (5e3 <= t && t <= 5600) return "The Chase";
-                        if (5820 <= t && t <= 6e3)
-                          return "Murrays Corner";
+                        if (5820 <= t && t <= 6e3) return "Murrays Corner";
                       } else if (7819 === e) {
                         if (3870 <= t || t <= 142) return "Start-Finish";
                         if (143 <= t && t <= 261) return "Kugelkopf";
-                        if (262 <= t && t <= 338)
-                          return "Fledermaushügel";
+                        if (262 <= t && t <= 338) return "Fledermaushügel";
                         if (412 <= t && t <= 514) return "Pumpenhaus";
                         if (515 <= t && t <= 633) return "Munitionsfeld";
                         if (780 <= t && t <= 850) return "Jägerbuche";
-                        if (851 <= t && t <= 954)
-                          return "Driburger Lichtung";
-                        if (955 <= t && t <= 1060)
-                          return "Hermannsschneise";
+                        if (851 <= t && t <= 954) return "Driburger Lichtung";
+                        if (955 <= t && t <= 1060) return "Hermannsschneise";
                         if (1084 <= t && t <= 1206) return "Sauwechsel";
-                        if (1245 <= t && t <= 1372)
-                          return "Telegrafenbogen";
+                        if (1245 <= t && t <= 1372) return "Telegrafenbogen";
                         if (1373 <= t && t <= 1479) return "Kommandatur";
                         if (1480 <= t && t <= 1675) return "Mausefalle";
                         if (1676 <= t && t <= 1834) return "Steilwand";
-                        if (1835 <= t && t <= 2075)
-                          return "Bilster Kuppe";
+                        if (1835 <= t && t <= 2075) return "Bilster Kuppe";
                         if (2076 <= t && t <= 2201) return "Hochsitz";
                         if (2202 <= t && t <= 2340) return "Clubhaus-S";
                         if (2341 <= t && t <= 2904) return "Pömbser Höhe";
                         if (2905 <= t && t <= 3274) return "Mutkurve";
-                        if (3275 <= t && t <= 3452)
-                          return "Nieheimer Senke";
+                        if (3275 <= t && t <= 3452) return "Nieheimer Senke";
                         if (3453 <= t && t <= 3676) return "Hügelgrab";
-                        if (3677 <= t && t <= 3869)
-                          return "Oeynhausen-Kehre";
+                        if (3677 <= t && t <= 3869) return "Oeynhausen-Kehre";
                       } else if (8069 === e) {
                         if (3892 <= t || t <= 142) return "Start-Finish";
                         if (143 <= t && t <= 261) return "Kugelkopf";
-                        if (262 <= t && t <= 338)
-                          return "Fledermaushügel";
+                        if (262 <= t && t <= 338) return "Fledermaushügel";
                         if (412 <= t && t <= 514) return "Pumpenhaus";
                         if (515 <= t && t <= 633) return "Munitionsfeld";
                         if (780 <= t && t <= 850) return "Jägerbuche";
-                        if (851 <= t && t <= 954)
-                          return "Driburger Lichtung";
-                        if (955 <= t && t <= 1060)
-                          return "Hermannsschneise";
+                        if (851 <= t && t <= 954) return "Driburger Lichtung";
+                        if (955 <= t && t <= 1060) return "Hermannsschneise";
                         if (1084 <= t && t <= 1206) return "Sauwechsel";
-                        if (1245 <= t && t <= 1372)
-                          return "Telegrafenbogen";
+                        if (1245 <= t && t <= 1372) return "Telegrafenbogen";
                         if (1373 <= t && t <= 1479) return "Kommandatur";
                         if (1480 <= t && t <= 1675) return "Mausefalle";
                         if (1676 <= t && t <= 1834) return "Steilwand";
-                        if (1835 <= t && t <= 2075)
-                          return "Bilster Kuppe";
+                        if (1835 <= t && t <= 2075) return "Bilster Kuppe";
                         if (2076 <= t && t <= 2201) return "Hochsitz";
                         if (2202 <= t && t <= 2340) return "Clubhaus-S";
                         if (2341 <= t && t <= 2758) return "Pömbser Höhe";
                         if (2759 <= t && t <= 2928) return "Schikane";
                         if (2929 <= t && t <= 3298) return "Mutkurve";
-                        if (3299 <= t && t <= 3474)
-                          return "Nieheimer Senke";
+                        if (3299 <= t && t <= 3474) return "Nieheimer Senke";
                         if (3475 <= t && t <= 3698) return "Hügelgrab";
-                        if (3699 <= t && t <= 3891)
-                          return "Oeynhausen-Kehre";
+                        if (3699 <= t && t <= 3891) return "Oeynhausen-Kehre";
                       } else if (8070 === e) {
                         if (2338 <= t || t <= 142) return "Start-Finish";
                         if (143 <= t && t <= 261) return "Kugelkopf";
-                        if (262 <= t && t <= 338)
-                          return "Fledermaushügel";
+                        if (262 <= t && t <= 338) return "Fledermaushügel";
                         if (412 <= t && t <= 514) return "Pumpenhaus";
                         if (515 <= t && t <= 633) return "Munitionsfeld";
                         if (860 <= t && t <= 1275) return "Pömbser Höhe";
                         if (1276 <= t && t <= 1645) return "Mutkurve";
-                        if (1646 <= t && t <= 1821)
-                          return "Nieheimer Senke";
+                        if (1646 <= t && t <= 1821) return "Nieheimer Senke";
                         if (1822 <= t && t <= 2144) return "Hügelgrab";
-                        if (2145 <= t && t <= 2337)
-                          return "Oeynhausen-Kehre";
+                        if (2145 <= t && t <= 2337) return "Oeynhausen-Kehre";
                       } else if (8071 === e) {
                         if (2272 <= t || t <= 142) return "Start-Finish";
                         if (143 <= t && t <= 261) return "Kugelkopf";
-                        if (262 <= t && t <= 338)
-                          return "Fledermaushügel";
+                        if (262 <= t && t <= 338) return "Fledermaushügel";
                         if (412 <= t && t <= 514) return "Pumpenhaus";
                         if (515 <= t && t <= 633) return "Munitionsfeld";
                         if (860 <= t && t <= 1128) return "Pömbser Höhe";
                         if (1129 <= t && t <= 1298) return "Schikane";
                         if (1299 <= t && t <= 1668) return "Mutkurve";
-                        if (1669 <= t && t <= 1844)
-                          return "Nieheimer Senke";
+                        if (1669 <= t && t <= 1844) return "Nieheimer Senke";
                         if (1855 <= t && t <= 2078) return "Hügelgrab";
-                        if (2079 <= t && t <= 2271)
-                          return "Oeynhausen-Kehre";
+                        if (2079 <= t && t <= 2271) return "Oeynhausen-Kehre";
                       } else if (8095 === e) {
                         if (1533 <= t || t <= 40) return "Start-Finish";
                         if (41 <= t && t <= 160) return "Hochsitz";
                         if (161 <= t && t <= 308) return "Clubhaus-S";
-                        if (450 <= t && t <= 561)
-                          return "Driburger Lichtung";
-                        if (562 <= t && t <= 667)
+                        if (450 <= t && t <= 561) return "Driburger Lichtung";
+                        if (562 <= t && t <= 667) 
                           return "Hermannsschneise";
                         if (691 <= t && t <= 813) return "Sauwechsel";
-                        if (850 <= t && t <= 977)
-                          return "Telegrafenbogen";
+                        if (850 <= t && t <= 977) return "Telegrafenbogen";
                         if (978 <= t && t <= 1085) return "Kommandatur";
                         if (1086 <= t && t <= 1284) return "Mausefalle";
-                        if (1285 <= t && t <= 1445) return "Steilwand";
-                        if (1446 <= t && t <= 1532)
-                          return "Bilster Kuppe";
+                        if (1285 <= t && t <= 1445) return "Steilwand"; 
+                        if (1446 <= t && t <= 1532) return "Bilster Kuppe";
                       } else if (2520 === e) {
                         if (1600 <= t || t <= 104) return "Start-Finish";
-                        if (191 <= t && t <= 410)
-                          return "Paddock Hill Bend";
+                        if (191 <= t && t <= 410) return "Paddock Hill Bend";
                         if (411 <= t && t <= 554) return "Hailwoods Hill";
                         if (555 <= t && t <= 714) return "Druids";
                         if (715 <= t && t <= 800) return "Graham Hill";
-                        if (850 <= t && t <= 944)
-                          return "Graham Hill Bend";
-                        if (950 <= t && t <= 1171)
-                          return "Cooper Straight";
+                        if (850 <= t && t <= 944) return "Graham Hill Bend";
+                        if (950 <= t && t <= 1171) return "Cooper Straight";
                         if (1172 <= t && t <= 1289) return "Surtees";
                         if (1290 <= t && t <= 1431) return "McLaren";
                         if (1432 <= t && t <= 1495) return "Clearways";
@@ -9822,75 +9831,55 @@
                         if (3955 <= t || t <= 310) return "Start-Finish";
                         if (311 <= t && t <= 520) return "Tarzanbocht";
                         if (570 <= t && t <= 780) return "Gerlachbocht";
-                        if (810 <= t && t <= 990)
-                          return "Hugenholtzbocht";
+                        if (810 <= t && t <= 990) return "Hugenholtzbocht";
                         if (1030 <= t && t <= 1210) return "Hunserug";
-                        if (1250 <= t && t <= 1580)
-                          return "Rob Slotemakerbocht";
+                        if (1250 <= t && t <= 1580) return "Rob Slotemakerbocht";
                         if (1635 <= t && t <= 1895) return "Scheivlak";
-                        if (2030 <= t && t <= 2190)
-                          return "Marlborobocht";
+                        if (2030 <= t && t <= 2190) return "Marlborobocht";
                         if (2260 <= t && t <= 2410) return "Renaultbocht";
-                        if (2480 <= t && t <= 2680)
-                          return "Vodafonebocht";
+                        if (2480 <= t && t <= 2680) return "Vodafonebocht";
                         if (3100 <= t && t <= 3330) return "Audi S";
                         if (3500 <= t && t <= 3650) return "Kumhobocht";
-                        if (3690 <= t && t <= 3954)
-                          return "Arie Luyendijkbocht";
+                        if (3690 <= t && t <= 3954) return "Arie Luyendijkbocht";
                       } else if (1680 === e) {
                         if (2565 <= t || t <= 310) return "Start-Finish";
                         if (311 <= t && t <= 520) return "Tarzanbocht";
                         if (570 <= t && t <= 780) return "Gerlachbocht";
-                        if (810 <= t && t <= 990)
-                          return "Hugenholtzbocht";
+                        if (810 <= t && t <= 990) return "Hugenholtzbocht";
                         if (1030 <= t && t <= 1210) return "Hunserug";
-                        if (1250 <= t && t <= 1470)
-                          return "Rob Slotemakerbocht";
+                        if (1250 <= t && t <= 1470) return "Rob Slotemakerbocht";
                         if (1710 <= t && t <= 1940) return "Audi S";
                         if (2110 <= t && t <= 2260) return "Kumhobocht";
-                        if (2300 <= t && t <= 2564)
-                          return "Arie Luyendijkbocht";
+                        if (2300 <= t && t <= 2564) return "Arie Luyendijkbocht";
                       } else if (1679 === e) {
                         if (2285 <= t || t <= 310) return "Start-Finish";
                         if (311 <= t && t <= 520) return "Tarzanbocht";
                         if (570 <= t && t <= 780) return "Gerlachbocht";
-                        if (810 <= t && t <= 990)
-                          return "Hugenholtzbocht";
+                        if (810 <= t && t <= 990) return "Hugenholtzbocht";
                         if (1030 <= t && t <= 1280) return "Hunserug";
                         if (1331 <= t && t <= 1560) return "Audi S";
                         if (1730 <= t && t <= 1880) return "Kumhobocht";
-                        if (2020 <= t && t <= 2284)
-                          return "Arie Luyendijkbocht";
+                        if (2020 <= t && t <= 2284) return "Arie Luyendijkbocht";
                       } else if (1684 === e) {
                         if (3711 <= t || t <= 220) return "Start-Finish";
                         if (221 <= t && t <= 415) return "Earste Links";
-                        if (528 <= t && t <= 705)
-                          return "Sterrenwachtbocht";
+                        if (528 <= t && t <= 705) return "Sterrenwachtbocht";
                         if (731 <= t && t <= 930) return "Kanaalbocht";
-                        if (1050 <= t && t <= 1230)
-                          return "Lucien Bianchibocht";
-                        if (1700 <= t && t <= 1850)
-                          return "Kleine Chicane";
+                        if (1050 <= t && t <= 1230) return "Lucien Bianchibocht";
+                        if (1700 <= t && t <= 1850) return "Kleine Chicane";
                         if (2010 <= t && t <= 2215) return "Butte";
-                        if (2251 <= t && t <= 2465)
-                          return "Gille Villeneuve Chicane";
-                        if (2501 <= t && t <= 2650)
-                          return "Terlamenbocht";
-                        if (2960 <= t && t <= 3065)
-                          return "Bolderberghaarspeldbocht";
-                        if (3100 <= t && t <= 3205)
-                          return "Jochen Rindtbocht";
-                        if (3575 <= t && t <= 3710)
-                          return "Jackie Ickxbocht";
+                        if (2251 <= t && t <= 2465) return "Gille Villeneuve Chicane";
+                        if (2501 <= t && t <= 2650) return "Terlamenbocht";
+                        if (2960 <= t && t <= 3065) return "Bolderberghaarspeldbocht";
+                        if (3100 <= t && t <= 3205) return "Jochen Rindtbocht";
+                        if (3575 <= t && t <= 3710) return "Jackie Ickxbocht";
                       } else if (8367 === e) {
                         if (5477 <= t || t <= 350) return "Start-Finish";
                         if (420 <= t && t <= 593) return "TURN 1";
                         if (640 <= t && t <= 735) return "TURN 2";
-                        if (885 <= t && t <= 1103)
-                          return "International Horseshoe";
+                        if (885 <= t && t <= 1103) return "International Horseshoe";
                         if (1379 <= t && t <= 1568) return "Dogleg";
-                        if (1660 <= t && t <= 1896)
-                          return "West Horseshoe";
+                        if (1660 <= t && t <= 1896) return "West Horseshoe";
                         if (2089 <= t && t <= 2238) return "TURN 6";
                         if (2384 <= t && t <= 2848) return "TURN 7";
                         if (2849 <= t && t <= 3313) return "TURN 8";
@@ -9907,8 +9896,7 @@
                         if (4484 <= t || t <= 350) return "Start-Finish";
                         if (420 <= t && t <= 593) return "TURN 1";
                         if (640 <= t && t <= 735) return "TURN 2";
-                        if (885 <= t && t <= 1103)
-                          return "International Horseshoe";
+                        if (885 <= t && t <= 1103) return "International Horseshoe";
                         if (1379 <= t && t <= 1495) return "TURN 4";
                         if (1496 <= t && t <= 1639) return "TURN 5";
                         if (1719 <= t && t <= 1931) return "TURN 6";
@@ -9931,8 +9919,7 @@
                         if (2387 <= t && t <= 2489) return "TURN 9";
                         if (2587 <= t && t <= 2692) return "TURN 10";
                         if (2693 <= t && t <= 2815) return "TURN 11";
-                        if (2850 <= t && t <= 3155)
-                          return "CocaCola Turn";
+                        if (2850 <= t && t <= 3155) return "CocaCola Turn";
                       } else if (3291 === e) {
                         if (3126 <= t || t <= 299) return "Start-Finish";
                         if (330 <= t && t <= 420) return "DEKRA Kurve";
@@ -9946,8 +9933,7 @@
                         if (2357 <= t && t <= 2459) return "TURN 9";
                         if (2557 <= t && t <= 2662) return "TURN 10";
                         if (2663 <= t && t <= 2785) return "TURN 11";
-                        if (2820 <= t && t <= 3125)
-                          return "CocaCola Turn";
+                        if (2820 <= t && t <= 3125) return "CocaCola Turn";
                       } else if (6166 === e) {
                         if (4266 <= t || t <= 299) return "Start-Finish";
                         if (330 <= t && t <= 420) return "DEKRA Kurve";
@@ -9963,8 +9949,7 @@
                         if (3492 <= t && t <= 3594) return "TURN 11";
                         if (3692 <= t && t <= 3797) return "TURN 12";
                         if (3798 <= t && t <= 3920) return "TURN 13";
-                        if (3955 <= t && t <= 4265)
-                          return "CocaCola Turn";
+                        if (3955 <= t && t <= 4265) return "CocaCola Turn";
                       } else if (9055 === e) {
                         if (4296 <= t || t <= 299) return "Start-Finish";
                         if (360 <= t && t <= 450) return "DEKRA Kurve";
@@ -9980,8 +9965,7 @@
                         if (3522 <= t && t <= 3624) return "TURN 11";
                         if (3722 <= t && t <= 3827) return "TURN 12";
                         if (3828 <= t && t <= 3950) return "TURN 13";
-                        if (3985 <= t && t <= 4295)
-                          return "CocaCola Turn";
+                        if (3985 <= t && t <= 4295) return "CocaCola Turn";
                       } else if (6587 === e) {
                         if (5216 <= t || t <= 420) return "Start-Finish";
                         if (690 <= t && t <= 820) return "Turn 1";
@@ -10062,26 +10046,20 @@
                       } else if (1693 === e) {
                         if (4400 <= t || t <= 215) return "Start-Finish";
                         if (216 <= t && t <= 405) return "Nord Kurve";
-                        if (755 <= t && t <= 1020)
-                          return "Einfahrt Parabolica";
+                        if (755 <= t && t <= 1020) return "Einfahrt Parabolica";
                         if (1021 <= t && t <= 1870) return "Parabolica";
                         if (2025 <= t && t <= 2180) return "Spitzkehre";
-                        if (2750 <= t && t <= 2900)
-                          return "Mercedes Kurve";
-                        if (3360 <= t && t <= 3600)
-                          return "Mobil 1 Kurve";
+                        if (2750 <= t && t <= 2900) return "Mercedes Kurve";
+                        if (3360 <= t && t <= 3600) return "Mobil 1 Kurve";
                         if (3700 <= t && t <= 3850) return "Sachs Kurve";
                         if (4070 <= t && t <= 4399) return "Süd Kurve";
                       } else if (1763 === e) {
                         if (3525 <= t || t <= 215) return "Start-Finish";
                         if (216 <= t && t <= 405) return "Nord Kurve";
-                        if (755 <= t && t <= 1020)
-                          return "Einfahrt Parabolica";
+                        if (755 <= t && t <= 1020) return "Einfahrt Parabolica";
                         if (1021 <= t && t <= 1530) return "Parabolica";
-                        if (1880 <= t && t <= 2020)
-                          return "Mercedes Kurve";
-                        if (2490 <= t && t <= 2680)
-                          return "Mobil 1 Kurve";
+                        if (1880 <= t && t <= 2020) return "Mercedes Kurve";
+                        if (2490 <= t && t <= 2680) return "Mobil 1 Kurve";
                         if (2810 <= t && t <= 3025) return "Sachs Kurve";
                         if (3200 <= t && t <= 3524) return "Süd Kurve";
                       } else if (1764 === e) {
@@ -10089,10 +10067,8 @@
                         if (216 <= t && t <= 405) return "Nord Kurve";
                         if (520 <= t && t <= 700) return "Ameisen Kurve";
                         if (701 <= t && t <= 1180) return "Querspange";
-                        if (1181 <= t && t <= 1405)
-                          return "Ausfahrt Querspange";
-                        if (1406 <= t && t <= 1600)
-                          return "Mobil 1 Kurve";
+                        if (1181 <= t && t <= 1405) return "Ausfahrt Querspange";
+                        if (1406 <= t && t <= 1600) return "Mobil 1 Kurve";
                         if (1730 <= t && t <= 1925) return "Sachs Kurve";
                         if (2110 <= t && t <= 2429) return "Süd Kurve";
                       } else if (1866 === e) {
@@ -10115,16 +10091,12 @@
                         if (3950 <= t && t <= 4185) return "TURN 16";
                       } else if (1850 === e) {
                         if (4510 <= t || t <= 290) return "Start-Finish";
-                        if (615 <= t && t <= 1e3)
-                          return "Variante Tamburello";
-                        if (1235 <= t && t <= 1520)
-                          return "Variante Villeneuve";
+                        if (615 <= t && t <= 1e3) return "Variante Tamburello";
+                        if (1235 <= t && t <= 1520) return "Variante Villeneuve";
                         if (1630 <= t && t <= 1810) return "Tosa";
                         if (2230 <= t && t <= 2435) return "Piratella";
-                        if (2660 <= t && t <= 3e3)
-                          return "Acque Minerali";
-                        if (3300 <= t && t <= 3490)
-                          return "Variante Alta";
+                        if (2660 <= t && t <= 3e3) return "Acque Minerali";
+                        if (3300 <= t && t <= 3490) return "Variante Alta";
                         if (4050 <= t && t <= 4390) return "Rivazza";
                       } else if (1852 === e) {
                         if (3845 <= t || t <= 395) return "Start-Finish";
@@ -10166,11 +10138,9 @@
                         if (550 <= t && t <= 640) return "Svacken";
                         if (660 <= t && t <= 780) return "Tändstiften";
                         if (800 <= t && t <= 890) return "Kompressionen";
-                        if (950 <= t && t <= 1060)
-                          return "Venestre for Harnalen";
+                        if (950 <= t && t <= 1060) return "Venestre for Harnalen";
                         if (1100 <= t && t <= 1200) return "Harnalen";
-                        if (1240 <= t && t <= 1330)
-                          return "Venestre efter Harnalen";
+                        if (1240 <= t && t <= 1330) return "Venestre efter Harnalen";
                         if (1375 <= t && t <= 1455) return "Kvällposten";
                         if (1535 <= t && t <= 1641) return "Gryden";
                         if (1675 <= t && t <= 1755) return "Bäcken";
@@ -10178,21 +10148,17 @@
                       } else if (2123 === e) {
                         if (5921 <= t || t <= 170) return "Start-Finish";
                         if (171 <= t && t <= 355) return "Reservoir";
-                        if (970 <= t && t <= 1185)
-                          return "Hotel Mandarin Oriental";
+                        if (970 <= t && t <= 1185) return "Hotel Mandarin Oriental";
                         if (1810 <= t && t <= 1920) return "Hotel Lisboa";
-                        if (2085 <= t && t <= 2450)
-                          return "St. Francisco Hill";
+                        if (2085 <= t && t <= 2450) return "St. Francisco Hill";
                         if (2680 <= t && t <= 2770) return "Maternity";
                         if (2890 <= t && t <= 3050) return "Teddy Yip";
-                        if (3085 <= t && t <= 2430)
-                          return "Solitude Esses";
+                        if (3085 <= t && t <= 2430) return "Solitude Esses";
                         if (3475 <= t && t <= 3590) return "Paiol";
                         if (3850 <= t && t <= 3940) return "Police";
                         if (4015 <= t && t <= 4080) return "Moorish";
                         if (4150 <= t && t <= 4260) return "Dona Maria";
-                        if (4261 <= t && t <= 4420)
-                          return "Dona Maria II";
+                        if (4261 <= t && t <= 4420) return "Dona Maria II";
                         if (4555 <= t && t <= 4660) return "Melco";
                         if (4790 <= t && t <= 5080) return "Black Sands";
                         if (5190 <= t && t <= 5380) return "Fisherman´s";
@@ -10224,8 +10190,7 @@
                         if (2380 <= t && t <= 2490) return "TURN 6";
                         if (2510 <= t && t <= 2730) return "The Esses";
                         if (2770 <= t && t <= 2895) return "TURN 8";
-                        if (2896 <= t && t <= 3055)
-                          return "Thundervalley";
+                        if (2896 <= t && t <= 3055) return "Thundervalley";
                         if (3056 <= t && t <= 3205) return "TURN 9";
                         if (3230 <= t && t <= 3370) return "TURN 10";
                         if (3455 <= t && t <= 3620) return "The Carousel";
@@ -10239,8 +10204,7 @@
                         if (1435 <= t && t <= 1545) return "TURN 5";
                         if (1565 <= t && t <= 2785) return "The Esses";
                         if (2825 <= t && t <= 1950) return "TURN 7";
-                        if (1951 <= t && t <= 2110)
-                          return "Thundervalley";
+                        if (1951 <= t && t <= 2110) return "Thundervalley";
                         if (2111 <= t && t <= 2260) return "TURN 9";
                         if (2285 <= t && t <= 2425) return "TURN 10";
                         if (2510 <= t && t <= 2675) return "The Carousel";
@@ -10257,8 +10221,7 @@
                         if (2385 <= t && t <= 2500) return "TURN 9";
                         if (2505 <= t && t <= 2740) return "The Esses";
                         if (2775 <= t && t <= 2870) return "TURN 11";
-                        if (2871 <= t && t <= 3030)
-                          return "Thundervalley";
+                        if (2871 <= t && t <= 3030) return "Thundervalley";
                         if (3031 <= t && t <= 3200) return "TURN 12";
                         if (3220 <= t && t <= 3360) return "TURN 13";
                         if (3450 <= t && t <= 3615) return "The Carousel";
@@ -10545,25 +10508,20 @@
                       } else if (2813 === e) {
                         if (20646 <= t || t <= 45) return "Start-Finish";
                         if (46 <= t && t <= 175) return "T13";
-                        if (405 <= t && t <= 535)
-                          return "Hatzenbachbogen";
+                        if (405 <= t && t <= 535) return "Hatzenbachbogen";
                         if (780 <= t && t <= 1510) return "Hatzenbach";
                         if (1520 <= t && t <= 1850) return "Hocheichen";
-                        if (1851 <= t && t <= 2135)
-                          return "Quiddelbacher Höhe";
+                        if (1851 <= t && t <= 2135) return "Quiddelbacher Höhe";
                         if (2136 <= t && t <= 2385) return "Flugplatz";
                         if (2386 <= t && t <= 3005) return "Kottenborn";
-                        if (3330 <= t && t <= 3600)
-                          return "Schwedenkreuz";
+                        if (3330 <= t && t <= 3600) return "Schwedenkreuz";
                         if (3690 <= t && t <= 3880) return "Aremberg";
                         if (3881 <= t && t <= 4715) return "Fuchsröhre";
-                        if (4920 <= t && t <= 5240)
-                          return "Adenauer Forst";
+                        if (4920 <= t && t <= 5240) return "Adenauer Forst";
                         if (5685 <= t && t <= 6145) return "Metzgesfeld";
                         if (6310 <= t && t <= 6475) return "Kallenhard";
                         if (6610 <= t && t <= 6780) return "Spiegelkurve";
-                        if (6825 <= t && t <= 7090)
-                          return "3 fach rechts";
+                        if (6825 <= t && t <= 7090) return "3 fach rechts";
                         if (7200 <= t && t <= 7455) return "Wehrseifen";
                         if (7760 <= t && t <= 7985) return "Breidscheid";
                         if (7986 <= t && t <= 8155) return "Ex-Mühle";
@@ -10572,169 +10530,116 @@
                         if (9715 <= t && t <= 10605) return "Kesselchen";
                         if (10645 <= t && t <= 10900) return "Mutkurve";
                         if (11205 <= t && t <= 11375) return "Klostertal";
-                        if (11440 <= t && t <= 11805)
-                          return "Steilstrecke";
-                        if (11855 <= t && t <= 12045)
-                          return "Caracciola-Karussell";
+                        if (11440 <= t && t <= 11805) return "Steilstrecke";
+                        if (11855 <= t && t <= 12045) return "Caracciola-Karussell";
                         if (12645 <= t && t <= 13025) return "Hohe Acht";
-                        if (13200 <= t && t <= 13450)
-                          return "Hedwigshöhe";
+                        if (13200 <= t && t <= 13450) return "Hedwigshöhe";
                         if (13451 <= t && t <= 13790) return "Wippermann";
                         if (13870 <= t && t <= 14040) return "Eschbach";
                         if (14055 <= t && t <= 14440) return "Brünnchen";
                         if (14550 <= t && t <= 14740) return "Eiskurve";
-                        if (15090 <= t && t <= 15370)
-                          return "Pflanzgarten";
-                        if (15550 <= t && t <= 15745)
-                          return "Sprunghügel";
-                        if (15746 <= t && t <= 16260)
-                          return "Stefan-Bellof-S";
-                        if (16261 <= t && t <= 16690)
-                          return "Schwalbenschwanz";
-                        if (16780 <= t && t <= 16940)
-                          return "Kleines Karussell";
+                        if (15090 <= t && t <= 15370) return "Pflanzgarten";
+                        if (15550 <= t && t <= 15745) return "Sprunghügel";
+                        if (15746 <= t && t <= 16260) return "Stefan-Bellof-S";
+                        if (16261 <= t && t <= 16690) return "Schwalbenschwanz";
+                        if (16780 <= t && t <= 16940) return "Kleines Karussell";
                         if (17170 <= t && t <= 17590) return "Galgenkopf";
-                        if (17720 <= t && t <= 19525)
-                          return "Döttinger Höhe";
-                        if (19526 <= t && t <= 19840)
-                          return "Antoniusbuche";
+                        if (17720 <= t && t <= 19525) return "Döttinger Höhe";
+                        if (19526 <= t && t <= 19840) return "Antoniusbuche";
                         if (19960 <= t && t <= 20265) return "Tiergarten";
-                        if (20315 <= t && t <= 20550)
-                          return "Hohenrain Schikane";
+                        if (20315 <= t && t <= 20550) return "Hohenrain Schikane";
                         if (20580 <= t && t <= 20645) return "T13";
                       } else if (4975 === e) {
                         if (24080 <= t || t <= 407) return "Start-Finish";
                         if (570 <= t && t <= 680) return "Yokohama S";
-                        if (690 <= t && t <= 1260)
-                          return "Mercedes Arena";
-                        if (1815 <= t && t <= 1950)
-                          return "Ravenol Kurve";
-                        if (2010 <= t && t <= 2200)
-                          return "Bilstein Kurve";
+                        if (690 <= t && t <= 1260) return "Mercedes Arena";
+                        if (1815 <= t && t <= 1950) return "Ravenol Kurve";
+                        if (2010 <= t && t <= 2200) return "Bilstein Kurve";
                         if (2440 <= t && t <= 2650) return "Advan Bogen";
-                        if (2890 <= t && t <= 3150)
-                          return "Veedol-Schikane";
-                        if (3260 <= t && t <= 3355)
-                          return "Einfahrt Nordschleife";
+                        if (2890 <= t && t <= 3150) return "Veedol-Schikane";
+                        if (3260 <= t && t <= 3355) return "Einfahrt Nordschleife";
                         if (3356 <= t && t <= 3555) return "T13";
-                        if (3785 <= t && t <= 3915)
-                          return "Hatzenbachbogen";
+                        if (3785 <= t && t <= 3915) return "Hatzenbachbogen";
                         if (4160 <= t && t <= 4890) return "Hatzenbach";
                         if (4900 <= t && t <= 5230) return "Hocheichen";
-                        if (5231 <= t && t <= 5515)
-                          return "Quiddelbacher Höhe";
+                        if (5231 <= t && t <= 5515) return "Quiddelbacher Höhe";
                         if (5516 <= t && t <= 5765) return "Flugplatz";
                         if (5766 <= t && t <= 6155) return "Kottenborn";
-                        if (6715 <= t && t <= 6980)
-                          return "Schwedenkreuz";
+                        if (6715 <= t && t <= 6980) return "Schwedenkreuz";
                         if (7070 <= t && t <= 7260) return "Aremberg";
                         if (7350 <= t && t <= 8095) return "Fuchsröhre";
-                        if (8300 <= t && t <= 8620)
-                          return "Adenauer Forst";
+                        if (8300 <= t && t <= 8620) return "Adenauer Forst";
                         if (9065 <= t && t <= 9525) return "Metzgesfeld";
                         if (9690 <= t && t <= 9855) return "Kallenhard";
-                        if (9990 <= t && t <= 10160)
-                          return "Spiegelkurve";
-                        if (10205 <= t && t <= 10470)
-                          return "3 fach rechts";
+                        if (9990 <= t && t <= 10160) return "Spiegelkurve";
+                        if (10205 <= t && t <= 10470) return "3 fach rechts";
                         if (10580 <= t && t <= 10835) return "Wehrseifen";
-                        if (11140 <= t && t <= 11365)
-                          return "Breidscheid";
+                        if (11140 <= t && t <= 11365) return "Breidscheid";
                         if (11366 <= t && t <= 11535) return "Ex-Mühle";
-                        if (11880 <= t && t <= 12015)
-                          return "Lauda links";
+                        if (11880 <= t && t <= 12015) return "Lauda links";
                         if (12115 <= t && t <= 12345) return "Bergwerk";
                         if (13095 <= t && t <= 13985) return "Kesselchen";
                         if (14025 <= t && t <= 14280) return "Mutkurve";
                         if (14585 <= t && t <= 14755) return "Klostertal";
-                        if (14820 <= t && t <= 15185)
-                          return "Steilstrecke";
-                        if (15235 <= t && t <= 15425)
-                          return "Caracciola-Karussell";
+                        if (14820 <= t && t <= 15185) return "Steilstrecke";
+                        if (15235 <= t && t <= 15425) return "Caracciola-Karussell";
                         if (16025 <= t && t <= 16405) return "Hohe Acht";
-                        if (16580 <= t && t <= 16830)
-                          return "Hedwigshöhe";
+                        if (16580 <= t && t <= 16830) return "Hedwigshöhe";
                         if (16831 <= t && t <= 17170) return "Wippermann";
                         if (17250 <= t && t <= 17420) return "Eschbach";
                         if (17435 <= t && t <= 17820) return "Brünnchen";
                         if (17930 <= t && t <= 18120) return "Eiskurve";
-                        if (18470 <= t && t <= 18750)
-                          return "Pflanzgarten";
-                        if (18930 <= t && t <= 19125)
-                          return "Sprunghügel";
-                        if (19126 <= t && t <= 19640)
-                          return "Stefan-Bellof-S";
-                        if (19641 <= t && t <= 20070)
-                          return "Schwalbenschwanz";
-                        if (20160 <= t && t <= 20320)
-                          return "Kleines Karussell";
+                        if (18470 <= t && t <= 18750) return "Pflanzgarten";
+                        if (18930 <= t && t <= 19125) return "Sprunghügel";
+                        if (19126 <= t && t <= 19640) return "Stefan-Bellof-S";
+                        if (19641 <= t && t <= 20070) return "Schwalbenschwanz";
+                        if (20160 <= t && t <= 20320) return "Kleines Karussell";
                         if (20550 <= t && t <= 20970) return "Galgenkopf";
-                        if (21100 <= t && t <= 22905)
-                          return "Döttinger Höhe";
-                        if (22906 <= t && t <= 23220)
-                          return "Antoniusbuche";
+                        if (21100 <= t && t <= 22905) return "Döttinger Höhe";
+                        if (22906 <= t && t <= 23220) return "Antoniusbuche";
                         if (23340 <= t && t <= 23645) return "Tiergarten";
-                        if (23695 <= t && t <= 23985)
-                          return "Hohenrain Schikane";
+                        if (23695 <= t && t <= 23985) return "Hohenrain Schikane";
                       } else if (5093 === e) {
                         if (20545 <= t || t <= 20) return "Start";
                         if (40 <= t && t <= 245) return "Antoniusbuche";
                         if (305 <= t && t <= 600) return "Tiergarten";
-                        if (660 <= t && t <= 890)
-                          return "Hohenrain Schikane";
+                        if (660 <= t && t <= 890) return "Hohenrain Schikane";
                         if (930 <= t && t <= 1300) return "T13";
-                        if (4415 <= t && t <= 4715)
-                          return "Hatzenbachbogen";
+                        if (4415 <= t && t <= 4715) return "Hatzenbachbogen";
                         if (4815 <= t && t <= 5665) return "Hatzenbach";
                         if (5715 <= t && t <= 5965) return "Hocheichen";
-                        if (6145 <= t && t <= 6515)
-                          return "Quiddelbacher Höhe";
+                        if (6145 <= t && t <= 6515) return "Quiddelbacher Höhe";
                         if (6565 <= t && t <= 6865) return "Flugplatz";
                         if (7020 <= t && t <= 7665) return "Kottenborn";
-                        if (7730 <= t && t <= 7995)
-                          return "Schwedenkreuz";
+                        if (7730 <= t && t <= 7995) return "Schwedenkreuz";
                         if (8085 <= t && t <= 8305) return "Aremberg";
                         if (8365 <= t && t <= 9210) return "Fuchsröhre";
-                        if (9315 <= t && t <= 9665)
-                          return "Adenauer Forst";
-                        if (10190 <= t && t <= 10605)
-                          return "Metzgesfeld";
+                        if (9315 <= t && t <= 9665) return "Adenauer Forst";
+                        if (10190 <= t && t <= 10605) return "Metzgesfeld";
                         if (10705 <= t && t <= 10890) return "Kallenhard";
-                        if (11015 <= t && t <= 11160)
-                          return "Spiegelkurve";
-                        if (11215 <= t && t <= 11465)
-                          return "3 fach rechts";
+                        if (11015 <= t && t <= 11160) return "Spiegelkurve";
+                        if (11215 <= t && t <= 11465) return "3 fach rechts";
                         if (11585 <= t && t <= 11885) return "Wehrseifen";
-                        if (12015 <= t && t <= 12355)
-                          return "Breidscheid";
+                        if (12015 <= t && t <= 12355) return "Breidscheid";
                         if (12385 <= t && t <= 12565) return "Ex-Mühle";
-                        if (12905 <= t && t <= 13015)
-                          return "Lauda links";
+                        if (12905 <= t && t <= 13015) return "Lauda links";
                         if (13115 <= t && t <= 13365) return "Bergwerk";
                         if (13515 <= t && t <= 14815) return "Kesselchen";
                         if (14915 <= t && t <= 15315) return "Mutkurve";
                         if (15380 <= t && t <= 15665) return "Klostertal";
-                        if (15795 <= t && t <= 16015)
-                          return "Steilstrecke";
-                        if (16225 <= t && t <= 16425)
-                          return "Caracciola-Karussell";
+                        if (15795 <= t && t <= 16015) return "Steilstrecke";
+                        if (16225 <= t && t <= 16425) return "Caracciola-Karussell";
                         if (17045 <= t && t <= 17485) return "Hohe Acht";
-                        if (17585 <= t && t <= 17885)
-                          return "Hedwigshöhe";
+                        if (17585 <= t && t <= 17885) return "Hedwigshöhe";
                         if (17965 <= t && t <= 18195) return "Wippermann";
                         if (18245 <= t && t <= 18405) return "Eschbach";
                         if (18445 <= t && t <= 18875) return "Brünnchen";
                         if (18915 <= t && t <= 19130) return "Eiskurve";
-                        if (19260 <= t && t <= 19845)
-                          return "Pflanzgarten";
-                        if (19940 <= t && t <= 20100)
-                          return "Sprunghügel";
-                        if (20140 <= t && t <= 20865)
-                          return "Stefan-Bellof-S";
-                        if (20915 <= t && t <= 21105)
-                          return "Schwalbenschwanz";
-                        if (21165 <= t && t <= 21290)
-                          return "Kleines Karussell";
+                        if (19260 <= t && t <= 19845) return "Pflanzgarten";
+                        if (19940 <= t && t <= 20100) return "Sprunghügel";
+                        if (20140 <= t && t <= 20865) return "Stefan-Bellof-S";
+                        if (20915 <= t && t <= 21105) return "Schwalbenschwanz";
+                        if (21165 <= t && t <= 21290) return "Kleines Karussell";
                         if (21555 <= t && t <= 21935) return "Galgenkopf";
                         if (18750 <= t && t <= 19040) return "Finish";
                       } else if (5095 === e) {
@@ -10742,203 +10647,147 @@
                         if (570 <= t && t <= 820) return "Yokohama S";
                         if (1260 <= t && t <= 1470) return "Ford Kurve";
                         if (1830 <= t && t <= 2075) return "Dunlop Kehre";
-                        if (2230 <= t && t <= 2570)
-                          return "Michael-Schumacher-S";
-                        if (2835 <= t && t <= 2970)
-                          return "Ravenol Kurve";
-                        if (3010 <= t && t <= 3235)
-                          return "Bilstein Kurve";
+                        if (2230 <= t && t <= 2570) return "Michael-Schumacher-S";
+                        if (2835 <= t && t <= 2970) return "Ravenol Kurve";
+                        if (3010 <= t && t <= 3235) return "Bilstein Kurve";
                         if (3450 <= t && t <= 3660) return "Advan Bogen";
-                        if (3960 <= t && t <= 4160)
-                          return "Veedol-Schikane";
-                        if (4275 <= t && t <= 4370)
-                          return "Einfahrt Nordschleife";
+                        if (3960 <= t && t <= 4160) return "Veedol-Schikane";
+                        if (4275 <= t && t <= 4370) return "Einfahrt Nordschleife";
                         if (4371 <= t && t <= 4570) return "T13";
-                        if (4800 <= t && t <= 4930)
-                          return "Hatzenbachbogen";
+                        if (4800 <= t && t <= 4930) return "Hatzenbachbogen";
                         if (5175 <= t && t <= 5905) return "Hatzenbach";
                         if (5915 <= t && t <= 6245) return "Hocheichen";
-                        if (6246 <= t && t <= 6530)
-                          return "Quiddelbacher Höhe";
+                        if (6246 <= t && t <= 6530) return "Quiddelbacher Höhe";
                         if (6531 <= t && t <= 6780) return "Flugplatz";
                         if (6781 <= t && t <= 7170) return "Kottenborn";
-                        if (7730 <= t && t <= 7995)
-                          return "Schwedenkreuz";
+                        if (7730 <= t && t <= 7995) return "Schwedenkreuz";
                         if (8085 <= t && t <= 8275) return "Aremberg";
                         if (8365 <= t && t <= 9110) return "Fuchsröhre";
-                        if (9315 <= t && t <= 9635)
-                          return "Adenauer Forst";
-                        if (10080 <= t && t <= 10540)
-                          return "Metzgesfeld";
+                        if (9315 <= t && t <= 9635) return "Adenauer Forst";
+                        if (10080 <= t && t <= 10540) return "Metzgesfeld";
                         if (10705 <= t && t <= 10870) return "Kallenhard";
-                        if (11005 <= t && t <= 11175)
-                          return "Spiegelkurve";
-                        if (11220 <= t && t <= 11485)
-                          return "3 fach rechts";
+                        if (11005 <= t && t <= 11175) return "Spiegelkurve";
+                        if (11220 <= t && t <= 11485) return "3 fach rechts";
                         if (11595 <= t && t <= 11850) return "Wehrseifen";
-                        if (12155 <= t && t <= 12380)
-                          return "Breidscheid";
+                        if (12155 <= t && t <= 12380) return "Breidscheid";
                         if (12381 <= t && t <= 12550) return "Ex-Mühle";
-                        if (12895 <= t && t <= 13030)
-                          return "Lauda links";
+                        if (12895 <= t && t <= 13030) return "Lauda links";
                         if (13130 <= t && t <= 13360) return "Bergwerk";
                         if (14110 <= t && t <= 15e3) return "Kesselchen";
                         if (15040 <= t && t <= 15295) return "Mutkurve";
                         if (15600 <= t && t <= 15770) return "Klostertal";
-                        if (15835 <= t && t <= 16200)
-                          return "Steilstrecke";
-                        if (16250 <= t && t <= 16440)
-                          return "Caracciola-Karussell";
+                        if (15835 <= t && t <= 16200) return "Steilstrecke";
+                        if (16250 <= t && t <= 16440) return "Caracciola-Karussell";
                         if (17040 <= t && t <= 17420) return "Hohe Acht";
-                        if (17595 <= t && t <= 17845)
-                          return "Hedwigshöhe";
+                        if (17595 <= t && t <= 17845) return "Hedwigshöhe";
                         if (17846 <= t && t <= 18185) return "Wippermann";
                         if (18265 <= t && t <= 18435) return "Eschbach";
                         if (18450 <= t && t <= 18835) return "Brünnchen";
                         if (18945 <= t && t <= 19135) return "Eiskurve";
-                        if (19485 <= t && t <= 19765)
-                          return "Pflanzgarten";
-                        if (19945 <= t && t <= 20140)
-                          return "Sprunghügel";
-                        if (20141 <= t && t <= 20655)
-                          return "Stefan-Bellof-S";
-                        if (20656 <= t && t <= 21085)
-                          return "Schwalbenschwanz";
-                        if (21175 <= t && t <= 21335)
-                          return "Kleines Karussell";
+                        if (19485 <= t && t <= 19765) return "Pflanzgarten";
+                        if (19945 <= t && t <= 20140) return "Sprunghügel";
+                        if (20141 <= t && t <= 20655) return "Stefan-Bellof-S";
+                        if (20656 <= t && t <= 21085) return "Schwalbenschwanz";
+                        if (21175 <= t && t <= 21335) return "Kleines Karussell";
                         if (21565 <= t && t <= 21985) return "Galgenkopf";
-                        if (22115 <= t && t <= 23920)
-                          return "Döttinger Höhe";
-                        if (23921 <= t && t <= 24235)
-                          return "Antoniusbuche";
+                        if (22115 <= t && t <= 23920) return "Döttinger Höhe";
+                        if (23921 <= t && t <= 24235) return "Antoniusbuche";
                         if (24355 <= t && t <= 24660) return "Tiergarten";
-                        if (24710 <= t && t <= 25e3)
-                          return "Hohenrain Schikane";
+                        if (24710 <= t && t <= 25e3) return "Hohenrain Schikane";
                       } else if (2518 === e) {
                         if (1840 <= t || t <= 80) return "Start-Finish";
                         if (440 <= t && t <= 550) return "Grundig Kehre";
                         if (850 <= t && t <= 1050) return "Schöller S";
-                        if (1560 <= t && t <= 1670)
-                          return "Dutzenteich Kehre";
+                        if (1560 <= t && t <= 1670) return "Dutzenteich Kehre";
                       } else if (1691 === e) {
                         if (4941 <= t || t <= 407) return "Start-Finish";
                         if (570 <= t && t <= 680) return "Yokohama S";
-                        if (690 <= t && t <= 1280)
-                          return "Mercedes Arena";
+                        if (690 <= t && t <= 1280) return "Mercedes Arena";
                         if (1790 <= t && t <= 1920) return "Ford Kurve";
                         if (2370 <= t && t <= 2560) return "Dunlop Kehre";
-                        if (2760 <= t && t <= 3060)
-                          return "Michael-Schumacher-S";
-                        if (3350 <= t && t <= 3480)
-                          return "Ravenol Kurve";
-                        if (3540 <= t && t <= 3700)
-                          return "Bilstein Kurve";
+                        if (2760 <= t && t <= 3060) return "Michael-Schumacher-S";
+                        if (3350 <= t && t <= 3480) return "Ravenol Kurve";
+                        if (3540 <= t && t <= 3700) return "Bilstein Kurve";
                         if (3960 <= t && t <= 4150) return "Advan Bogen";
-                        if (4460 <= t && t <= 4600)
-                          return "Veedol-Schikane";
+                        if (4460 <= t && t <= 4600) return "Veedol-Schikane";
                         if (4760 <= t && t <= 4940) return "Jaguar Kurve";
                       } else if (2010 === e) {
                         if (4931 <= t || t <= 407) return "Start-Finish";
                         if (570 <= t && t <= 680) return "Yokohama S";
-                        if (690 <= t && t <= 1280)
-                          return "Mercedes Arena";
+                        if (690 <= t && t <= 1280) return "Mercedes Arena";
                         if (1790 <= t && t <= 1920) return "Ford Kurve";
                         if (2370 <= t && t <= 2560) return "Dunlop Kehre";
-                        if (2760 <= t && t <= 3060)
-                          return "Michael-Schumacher-S";
-                        if (3350 <= t && t <= 3480)
-                          return "Ravenol Kurve";
-                        if (3540 <= t && t <= 3700)
-                          return "Bilstein Kurve";
+                        if (2760 <= t && t <= 3060) return "Michael-Schumacher-S";
+                        if (3350 <= t && t <= 3480) return "Ravenol Kurve";
+                        if (3540 <= t && t <= 3700) return "Bilstein Kurve";
                         if (3960 <= t && t <= 4150) return "Advan Bogen";
-                        if (4400 <= t && t <= 4660)
-                          return "Veedol-Schikane";
+                        if (4400 <= t && t <= 4660) return "Veedol-Schikane";
                         if (4750 <= t && t <= 4930) return "Jaguar Kurve";
                       } else if (2011 === e) {
                         if (3421 <= t || t <= 407) return "Start-Finish";
                         if (570 <= t && t <= 680) return "Yokohama S";
-                        if (690 <= t && t <= 1260)
-                          return "Mercedes Arena";
-                        if (1815 <= t && t <= 1950)
-                          return "Ravenol Kurve";
-                        if (2010 <= t && t <= 2200)
-                          return "Bilstein Kurve";
+                        if (690 <= t && t <= 1260) return "Mercedes Arena";
+                        if (1815 <= t && t <= 1950) return "Ravenol Kurve";
+                        if (2010 <= t && t <= 2200) return "Bilstein Kurve";
                         if (2440 <= t && t <= 2650) return "Advan Bogen";
-                        if (2890 <= t && t <= 3150)
-                          return "Veedol-Schikane";
+                        if (2890 <= t && t <= 3150) return "Veedol-Schikane";
                         if (3220 <= t && t <= 3420) return "Jaguar Kurve";
                       } else if (3377 === e) {
                         if (3431 <= t || t <= 407) return "Start-Finish";
                         if (570 <= t && t <= 680) return "Yokohama S";
-                        if (690 <= t && t <= 1260)
-                          return "Mercedes Arena";
-                        if (1815 <= t && t <= 1950)
-                          return "Ravenol Kurve";
-                        if (2010 <= t && t <= 2200)
-                          return "Bilstein Kurve";
+                        if (690 <= t && t <= 1260) return "Mercedes Arena";
+                        if (1815 <= t && t <= 1950) return "Ravenol Kurve";
+                        if (2010 <= t && t <= 2200) return "Bilstein Kurve";
                         if (2440 <= t && t <= 2650) return "Advan Bogen";
-                        if (2950 <= t && t <= 3090)
-                          return "Veedol-Schikane";
+                        if (2950 <= t && t <= 3090) return "Veedol-Schikane";
                         if (3230 <= t && t <= 3430) return "Jaguar Kurve";
                       } else if (2867 === e) {
                         if (3645 <= t || t <= 300) return "Start-Finish";
-                        if (685 <= t && t <= 900)
-                          return "Mistral Straight";
+                        if (685 <= t && t <= 900) return "Mistral Straight";
                         if (950 <= t && t <= 1165) return "Chicane 2";
-                        if (1265 <= t && t <= 1810)
-                          return "Mistral Straight";
+                        if (1265 <= t && t <= 1810) return "Mistral Straight";
                         if (1811 <= t && t <= 2070) return "Signes";
                         if (2255 <= t && t <= 2630) return "Beausset";
                         if (2745 <= t && t <= 2945) return "Bendor";
                         if (2946 <= t && t <= 3275) return "Village";
                         if (3276 <= t && t <= 3485) return "Tour";
-                        if (3486 <= t && t <= 3580)
-                          return "Virage du Pont";
+                        if (3486 <= t && t <= 3580) return "Virage du Pont";
                       } else if (4246 === e) {
                         if (5580 <= t || t <= 300) return "Start-Finish";
                         if (600 <= t && t <= 950) return "Verriere";
                         if (1230 <= t && t <= 1450) return "Chicane";
-                        if (1460 <= t && t <= 1815)
-                          return "Saint-Beaurne";
+                        if (1460 <= t && t <= 1815) return "Saint-Beaurne";
                         if (1816 <= t && t <= 1960) return "Lecole";
-                        if (1961 <= t && t <= 3720)
-                          return "Mistral Straight";
+                        if (1961 <= t && t <= 3720) return "Mistral Straight";
                         if (3721 <= t && t <= 4e3) return "Signes";
                         if (4170 <= t && t <= 4580) return "Beausset";
                         if (4665 <= t && t <= 4880) return "Bendor";
                         if (4881 <= t && t <= 5200) return "Village";
                         if (5201 <= t && t <= 5415) return "Tour";
-                        if (5416 <= t && t <= 5515)
-                          return "Virage du Pont";
+                        if (5416 <= t && t <= 5515) return "Virage du Pont";
                       } else if (4247 === e) {
                         if (5665 <= t || t <= 300) return "Start-Finish";
                         if (590 <= t && t <= 890) return "Verriere";
                         if (1280 <= t && t <= 1490) return "Chicane";
-                        if (1500 <= t && t <= 1860)
-                          return "Saint-Beaurne";
+                        if (1500 <= t && t <= 1860) return "Saint-Beaurne";
                         if (1861 <= t && t <= 1995) return "Lecole";
-                        if (1996 <= t && t <= 2925)
-                          return "Mistral Straight";
+                        if (1996 <= t && t <= 2925) return "Mistral Straight";
                         if (2955 <= t && t <= 3200) return "Chicane 2";
-                        if (3300 <= t && t <= 3820)
-                          return "Mistral Straight";
+                        if (3300 <= t && t <= 3820) return "Mistral Straight";
                         if (3821 <= t && t <= 4100) return "Signes";
                         if (4275 <= t && t <= 4650) return "Beausset";
                         if (4755 <= t && t <= 4965) return "Bendor";
                         if (4966 <= t && t <= 5300) return "Village";
                         if (5301 <= t && t <= 5510) return "Tour";
-                        if (5511 <= t && t <= 5600)
-                          return "Virage du Pont";
+                        if (5511 <= t && t <= 5600) return "Virage du Pont";
                       } else if (4248 === e) {
                         if (3275 <= t || t <= 300) return "Start-Finish";
-                        if (880 <= t && t <= 2020)
-                          return "Mistral Straight";
+                        if (880 <= t && t <= 2020) return "Mistral Straight";
                         if (2021 <= t && t <= 2280) return "Signes";
                         if (2435 <= t && t <= 2570) return "Bendor";
                         if (2571 <= t && t <= 2900) return "Village";
                         if (2901 <= t && t <= 3115) return "Tour";
-                        if (3116 <= t && t <= 3210)
-                          return "Virage du Pont";
+                        if (3116 <= t && t <= 3210) return "Virage du Pont";
                       } else if (1778 === e) {
                         if (4180 <= t || t <= 135) return "Start-Finish";
                         if (365 <= t && t <= 450) return "Primeira";
@@ -11080,22 +10929,19 @@
                         if (2485 <= t && t <= 2720) return "Rauch";
                         if (2820 <= t && t <= 3015) return "Würth Kurve";
                         if (3580 <= t && t <= 3720) return "Rindt";
-                        if (3810 <= t && t <= 3990)
-                          return "Red Bull Mobile";
+                        if (3810 <= t && t <= 3990) return "Red Bull Mobile";
                       } else if (5794 === e) {
                         if (2040 <= t || t <= 180) return "Start-Finish";
                         if (285 <= t && t <= 390) return "Castrol Edge";
                         if (650 <= t && t <= 845) return "TURN 2";
                         if (846 <= t && t <= 1040) return "Würth Kurve";
                         if (1605 <= t && t <= 1740) return "Rindt";
-                        if (1840 <= t && t <= 2010)
-                          return "Red Bull Mobile";
+                        if (1840 <= t && t <= 2010) return "Red Bull Mobile";
                       } else if (5276 === e) {
                         if (6245 <= t || t <= 320) return "Start-Finish";
                         if (600 <= t && t <= 750) return "TURN 1";
                         if (1075 <= t && t <= 1220) return "TURN 2";
-                        if (1265 <= t && t <= 2115)
-                          return "Moraine Sweep";
+                        if (1265 <= t && t <= 2115) return "Moraine Sweep";
                         if (2310 <= t && t <= 2410) return "TURN 3";
                         if (2605 <= t && t <= 2715) return "TURN 4";
                         if (2850 <= t && t <= 2955) return "TURN 5";
@@ -11103,16 +10949,13 @@
                         if (3271 <= t && t <= 3375) return "TURN 6";
                         if (3470 <= t && t <= 3970) return "Carousel";
                         if (4250 <= t && t <= 4440) return "The Kink";
-                        if (4470 <= t && t <= 5010)
-                          return "Kettle Bottoms";
-                        if (5140 <= t && t <= 5260)
-                          return "Canada Corner";
+                        if (4470 <= t && t <= 5010) return "Kettle Bottoms";
+                        if (5140 <= t && t <= 5260) return "Canada Corner";
                         if (5450 <= t && t <= 5610) return "TURN 10";
                         if (5770 <= t && t <= 5940) return "TURN 11";
                       } else if (3538 === e) {
                         if (3370 <= t || t <= 100) return "Start-Finish";
-                        if (290 <= t && t <= 435)
-                          return "Auto Motor und Sport";
+                        if (290 <= t && t <= 435) return "Auto Motor und Sport";
                         if (620 <= t && t <= 860) return "Omega";
                         if (930 <= t && t <= 1150) return "Kleine Kuppe";
                         if (1200 <= t && t <= 1460) return "Karthallen";
@@ -11125,17 +10968,14 @@
                       } else if (2026 === e) {
                         if (4090 <= t || t <= 265) return "Start-Finish";
                         if (650 <= t && t <= 750) return "Schikane 1";
-                        if (1150 <= t && t <= 1440)
-                          return "Nockstein-Kehre";
+                        if (1150 <= t && t <= 1440) return "Nockstein-Kehre";
                         if (1441 <= t && t <= 2820) return "Gegengerade";
-                        if (2821 <= t && t <= 3605)
-                          return "Fahrerlagerkurve";
+                        if (2821 <= t && t <= 3605) return "Fahrerlagerkurve";
                         if (3650 <= t && t <= 4015) return "Schikane 2";
                       } else if (5301 === e) {
                         if (3851 <= t || t <= 60) return "Start-Finish";
                         if (61 <= t && t <= 340) return "Södra";
-                        if (341 <= t && t <= 1200)
-                          return "Flight Straight";
+                        if (341 <= t && t <= 1200) return "Flight Straight";
                         if (1201 <= t && t <= 1380) return "Norra";
                         if (1490 <= t && t <= 1650) return "Läktar";
                         if (1990 <= t && t <= 2290) return "Start Kurvan";
@@ -11146,8 +10986,7 @@
                       } else if (6164 === e) {
                         if (1700 <= t || t <= 60) return "Start-Finish";
                         if (61 <= t && t <= 340) return "Södra";
-                        if (341 <= t && t <= 805)
-                          return "Flight Straight";
+                        if (341 <= t && t <= 805) return "Flight Straight";
                         if (806 <= t && t <= 920) return "South";
                         if (997 <= t && t <= 1140) return "Hansen";
                         if (1200 <= t && t <= 1605) return "Karusell";
@@ -11244,8 +11083,7 @@
                         if (865 <= t && t <= 955) return "The Loop";
                         if (956 <= t && t <= 1085) return "Arena";
                         if (1086 <= t && t <= 1170) return "Aintree";
-                        if (1200 <= t && t <= 1700)
-                          return "Wellington Straight";
+                        if (1200 <= t && t <= 1700) return "Wellington Straight";
                         if (1750 <= t && t <= 1925) return "Brooklands";
                         if (1955 <= t && t <= 2170) return "Luffield";
                         if (2260 <= t && t <= 2525) return "Woodcote";
@@ -11255,8 +11093,7 @@
                         if (3690 <= t && t <= 3820) return "Becketts";
                         if (3821 <= t && t <= 3985) return "TURN 13";
                         if (4e3 <= t && t <= 4115) return "Chapel";
-                        if (4145 <= t && t <= 4700)
-                          return "Hangar Straight";
+                        if (4145 <= t && t <= 4700) return "Hangar Straight";
                         if (4825 <= t && t <= 5040) return "Stowe";
                         if (5070 <= t && t <= 5300) return "Vale";
                         if (5340 <= t && t <= 5420) return "TURN 16";
@@ -11270,8 +11107,7 @@
                         if (980 <= t && t <= 1110) return "Becketts";
                         if (1111 <= t && t <= 1275) return "TURN 5";
                         if (1276 <= t && t <= 1405) return "Chapel";
-                        if (1435 <= t && t <= 1990)
-                          return "Hangar Straight";
+                        if (1435 <= t && t <= 1990) return "Hangar Straight";
                         if (2115 <= t && t <= 2330) return "Stowe";
                         if (2360 <= t && t <= 2490) return "Vale";
                         if (2540 <= t && t <= 2680) return "TURN 8";
@@ -11283,8 +11119,7 @@
                         if (4e3 <= t && t <= 4090) return "The Loop";
                         if (4091 <= t && t <= 4205) return "Arena";
                         if (4206 <= t && t <= 4305) return "Aintree";
-                        if (4335 <= t && t <= 4835)
-                          return "Wellington Straight";
+                        if (4335 <= t && t <= 4835) return "Wellington Straight";
                         if (4885 <= t && t <= 5060) return "Brooklands";
                         if (5090 <= t && t <= 5310) return "Luffield";
                         if (5370 <= t && t <= 5650) return "Woodcote";
@@ -11295,8 +11130,7 @@
                         if (725 <= t && t <= 820) return "Village";
                         if (865 <= t && t <= 945) return "TURN 4";
                         if (1030 <= t && t <= 1110) return "TURN 5";
-                        if (1245 <= t && t <= 1800)
-                          return "Hangar Straight";
+                        if (1245 <= t && t <= 1800) return "Hangar Straight";
                         if (1925 <= t && t <= 2120) return "Stowe";
                         if (2150 <= t && t <= 2380) return "Vale";
                         if (2420 <= t && t <= 2520) return "TURN 7";
@@ -11308,8 +11142,7 @@
                         if (715 <= t && t <= 830) return "Maggots";
                         if (831 <= t && t <= 925) return "TURN 3";
                         if (926 <= t && t <= 1075) return "TURN 4";
-                        if (1125 <= t && t <= 1625)
-                          return "Wellington Straight";
+                        if (1125 <= t && t <= 1625) return "Wellington Straight";
                         if (1675 <= t && t <= 1850) return "Brooklands";
                         if (1880 <= t && t <= 2100) return "Luffield";
                         if (2160 <= t && t <= 2440) return "Woodcote";
@@ -11410,8 +11243,7 @@
                         if (191 <= t && t <= 405) return "Eau Rouge";
                         if (406 <= t && t <= 505) return "Raidillon";
                         if (685 <= t && t <= 815) return "Kemmel";
-                        if (816 <= t && t <= 1515)
-                          return "Kemmel-Straight";
+                        if (816 <= t && t <= 1515) return "Kemmel-Straight";
                         if (1516 <= t && t <= 1720) return "Les Combes";
                         if (1770 <= t && t <= 1880) return "Malmedy";
                         if (2120 <= t && t <= 2320) return "Rivage";
@@ -11430,8 +11262,7 @@
                         if (191 <= t && t <= 405) return "Eau Rouge";
                         if (406 <= t && t <= 505) return "Raidillon";
                         if (685 <= t && t <= 815) return "Kemmel";
-                        if (816 <= t && t <= 1515)
-                          return "Kemmel-Straight";
+                        if (816 <= t && t <= 1515) return "Kemmel-Straight";
                         if (1516 <= t && t <= 1720) return "Les Combes";
                         if (1770 <= t && t <= 1880) return "Malmedy";
                         if (2120 <= t && t <= 2320) return "Rivage";
@@ -11452,8 +11283,7 @@
                         if (890 <= t && t <= 1105) return "Eau Rouge";
                         if (1106 <= t && t <= 1205) return "Raidillon";
                         if (1395 <= t && t <= 1510) return "Kemmel";
-                        if (1511 <= t && t <= 2205)
-                          return "Kemmel-Straight";
+                        if (1511 <= t && t <= 2205) return "Kemmel-Straight";
                         if (2206 <= t && t <= 2420) return "Les Combes";
                         if (2465 <= t && t <= 2570) return "Malmedy";
                         if (2820 <= t && t <= 3020) return "Rivage";
@@ -11499,8 +11329,7 @@
                         if (3465 <= t && t <= 3820) return "Spoon";
                         if (3910 <= t && t <= 4580) return "Crossover";
                         if (4610 <= t && t <= 4890) return "130R";
-                        if (5030 <= t && t <= 5460)
-                          return "Casio Triangle";
+                        if (5030 <= t && t <= 5460) return "Casio Triangle";
                       } else if (2012 === e) {
                         if (1895 <= t || t <= 60) return "Start-Finish";
                         if (345 <= t && t <= 630) return "First";
@@ -11524,42 +11353,32 @@
                         if (210 <= t && t <= 310) return "First Corner";
                         if (311 <= t && t <= 410) return "Second Corner";
                         if (890 <= t && t <= 1010) return "Third Corner";
-                        if (1011 <= t && t <= 1150)
-                          return "Fourth Corner";
+                        if (1011 <= t && t <= 1150) return "Fourth Corner";
                         if (1600 <= t && t <= 1700) return "Firth Corner";
                         if (1850 <= t && t <= 2015) return "130 Radius";
                         if (2205 <= t && t <= 2510) return "S Curve";
                         if (2660 <= t && t <= 2780) return "V Corner";
-                        if (3100 <= t && t <= 3230)
-                          return "Hairpin Curve";
-                        if (3231 <= t && t <= 3945)
-                          return "Down Hill Straight";
-                        if (3946 <= t && t <= 4030)
-                          return "90 Degrees Corner";
-                        if (4430 <= t && t <= 4420)
-                          return "Victory Corner";
+                        if (3100 <= t && t <= 3230) return "Hairpin Curve";
+                        if (3231 <= t && t <= 3945) return "Down Hill Straight";
+                        if (3946 <= t && t <= 4030) return "90 Degrees Corner";
+                        if (4430 <= t && t <= 4420) return "Victory Corner";
                       } else if (7026 === e) {
                         if (1185 <= t || t <= 55) return "Start-Finish";
                         if (210 <= t && t <= 310) return "First Corner";
                         if (311 <= t && t <= 410) return "Second Corner";
-                        if (850 <= t && t <= 1045)
-                          return "West Short Cut";
-                        if (1046 <= t && t <= 1140)
-                          return "Victory Corner";
+                        if (850 <= t && t <= 1045) return "West Short Cut";
+                        if (1046 <= t && t <= 1140) return "Victory Corner";
                       } else if (7027 === e) {
                         if (3170 <= t || t <= 20) return "Start-Finish";
-                        if (21 <= t && t <= 500)
-                          return "Down Hill Straight";
-                        if (501 <= t && t <= 605)
-                          return "90 Degrees Corner";
+                        if (21 <= t && t <= 500) return "Down Hill Straight";
+                        if (501 <= t && t <= 605) return "90 Degrees Corner";
                         if (695 <= t && t <= 985) return "East Short Cut";
                         if (986 <= t && t <= 1100) return "Fourth Corner";
                         if (1535 <= t && t <= 1640) return "Fifth Corner";
                         if (1785 <= t && t <= 1970) return "130 Radius";
                         if (2140 <= t && t <= 2455) return "S Curve";
                         if (2600 <= t && t <= 2725) return "V Corner";
-                        if (3045 <= t && t <= 3169)
-                          return "Hairpin Curve";
+                        if (3045 <= t && t <= 3169) return "Hairpin Curve";
                       } else if (9465 === e) {
                         if (2110 <= t || t <= 125) return "Start-Finish";
                         if (126 <= t && t <= 171) return "Turn 1";
@@ -11578,10 +11397,8 @@
                         if (610 <= t && t <= 1060) return "The Esses";
                         if (1105 <= t && t <= 1380) return "Turn 4";
                         if (1381 <= t && t <= 1888) return "Backstretch";
-                        if (1889 <= t && t <= 2128)
-                          return "Bus Stop (Inner Loop)";
-                        if (2153 <= t && t <= 2543)
-                          return "The Outer Loop";
+                        if (1889 <= t && t <= 2128) return "Bus Stop (Inner Loop)";
+                        if (2153 <= t && t <= 2543) return "The Outer Loop";
                         if (3128 <= t && t <= 3293) return "Turn 10";
                         if (3438 <= t && t <= 3633) return "Turn 11";
                       } else if (9324 === e) {
@@ -11590,8 +11407,7 @@
                         if (610 <= t && t <= 1060) return "The Esses";
                         if (1105 <= t && t <= 1380) return "Turn 4";
                         if (1381 <= t && t <= 1888) return "Backstretch";
-                        if (1889 <= t && t <= 2128)
-                          return "Bus Stop (Inner Loop)";
+                        if (1889 <= t && t <= 2128) return "Bus Stop (Inner Loop)";
                         if (2153 <= t && t <= 2508) return "Outer Loop";
                         if (2688 <= t && t <= 2938) return "Laces";
                         if (3193 <= t && t <= 3453) return "Toe";
@@ -11606,8 +11422,7 @@
                         if (610 <= t && t <= 1060) return "The Esses";
                         if (1105 <= t && t <= 1380) return "Turn 4";
                         if (1381 <= t && t <= 1888) return "Backstretch";
-                        if (2145 <= t && t <= 2535)
-                          return "The Outer Loop";
+                        if (2145 <= t && t <= 2535) return "The Outer Loop";
                         if (3120 <= t && t <= 3285) return "Turn 10";
                         if (3430 <= t && t <= 3625) return "Turn 11";
                       } else if (9344 === e) {
@@ -11616,8 +11431,7 @@
                         if (610 <= t && t <= 1060) return "The Esses";
                         if (1105 <= t && t <= 1380) return "Turn 4";
                         if (1381 <= t && t <= 1888) return "Backstretch";
-                        if (2145 <= t && t <= 2500)
-                          return "The Outer Loop";
+                        if (2145 <= t && t <= 2500) return "The Outer Loop";
                         if (2680 <= t && t <= 2930) return "Laces";
                         if (3185 <= t && t <= 3445) return "Toe";
                         if (3446 <= t && t <= 3925) return "The Boot";
@@ -11628,17 +11442,14 @@
                       } else if (1856 === e) {
                         if (3390 <= t || t <= 100) return "Start-Finish";
                         if (160 <= t && t <= 300) return "TURN 1";
-                        if (400 <= t && t <= 600)
-                          return "Andretti Hairpin";
+                        if (400 <= t && t <= 600) return "Andretti Hairpin";
                         if (730 <= t && t <= 860) return "TURN 3";
                         if (995 <= t && t <= 1140) return "TURN 4";
                         if (1200 <= t && t <= 1360) return "TURN 5";
                         if (1460 <= t && t <= 1690) return "TURN 6";
                         if (1890 <= t && t <= 2110) return "TURN 7";
-                        if (2111 <= t && t <= 2340)
-                          return "Rahal Straight";
-                        if (2410 <= t && t <= 2590)
-                          return "The Corkscrew";
+                        if (2111 <= t && t <= 2340) return "Rahal Straight";
+                        if (2410 <= t && t <= 2590) return "The Corkscrew";
                         if (2600 <= t && t <= 2820) return "TURN 10";
                         if (2935 <= t && t <= 3070) return "TURN 11";
                         if (3220 <= t && t <= 3340) return "TURN 12";
@@ -11686,6 +11497,62 @@
                         if (3241 <= t && t <= 3320) return "TURN 12";
                         if (3600 <= t && t <= 3755) return "TURN 13";
                         if (3840 <= t && t <= 3970) return "TURN 14";
+                      }
+					  else if (12420 === e) {
+                        if (2314 <= t || t <= 100) return "Start-Finish";
+                        if (700 <= t && t <= 900) return "Südkurve";
+                        if (1160 <= t && t <= 1355) return "Chicane";
+                        if (1535 <= t && t <= 1750) return "TURN 2";
+						if (1760 <= t && t <= 1890) return "Chicane";
+                        if (1891 <= t && t <= 2313) return "TURN 3";
+                      }
+					  else if (12500 === e) {
+                        if (2359 <= t || t <= 100) return "Start-Finish";
+                        if (700 <= t && t <= 900) return "Südkurve";
+                        if (1160 <= t && t <= 1355) return "Chicane";
+                        if (1535 <= t && t <= 1750) return "TURN 2";
+                        if (1840 <= t && t <= 2358) return "TURN 3";
+                      }
+					  else if (12938 === e) {
+                        if (2325 <= t || t <= 168) return "Start-Finish";
+                        if (168 <= t && t <= 300) return "Turn 1";
+                        if (500 <= t && t <= 620) return "Turn 2";
+                        if (621 <= t && t <= 790) return "Turn 3";
+                        if (1030 <= t && t <= 1150) return "Turn 4";
+						if (1300 <= t && t <= 1450) return "Turn 5";
+                        if (1830 <= t && t <= 1950) return "Chicane";
+                        if (2050 <= t && t <= 2150) return "Turn 6";
+                        if (2200 <= t && t <= 2320) return "Hairpin";
+                      }					  
+					  else if (10394 === e) {
+                        if (3806 <= t || t <= 0) return "Start-Finish";
+                        if (0 <= t && t <= 190) return "Wheatcroft Straight";
+                        if (191 <= t && t <= 438) return "Redgate";
+                        if (600 <= t && t <= 807) return "Hollywood";
+                        if (820 <= t && t <= 950) return "Craner Curves";
+						if (1050 <= t && t <= 1170) return "Old Hairpin";						
+                        if (1250 <= t && t <= 1400) return "Starkeys Bridge";
+                        if (1530 <= t && t <= 1630) return "Schwantz Curve";
+                        if (1680 <= t && t <= 1820) return "McLeans";
+						if (1980 <= t && t <= 2300) return "Coppice";
+                        if (2310 <= t && t <= 2700) return "Dunlop Straight";
+						if (2750 <= t && t <= 2940) return "Fogarty's Esses";
+                        if (3260 <= t && t <= 3400) return "Melbourne Hairpin";
+                        if (3650 <= t && t <= 3750) return "Goddards";
+                      }
+					  else if (10725 === e) {
+                        if (3005 <= t || t <= 0) return "Start-Finish";
+                        if (0 <= t && t <= 190) return "Wheatcroft Straight";
+                        if (191 <= t && t <= 495) return "Redgate";
+                        if (496 <= t && t <= 807) return "Hollywood";
+                        if (808 <= t && t <= 1009) return "Craner Curves";
+						if (1010 <= t && t <= 1226) return "Old Hairpin";						
+                        if (1227 <= t && t <= 1450) return "Starkeys Bridge";
+                        if (1451 <= t && t <= 1642) return "Schwantz Curve";
+                        if (1643 <= t && t <= 1867) return "McLeans";
+						if (1973 <= t && t <= 2300) return "Coppice";
+                        if (2301 <= t && t <= 2709) return "Dunlop Straight";
+						if (2710 <= t && t <= 2926) return "Fogarty's Esses";
                       }					  
 					  else if (10463 === e) {
                         if (4000 <= t || t <= 150) return "Start-Finish";
@@ -87577,6 +87444,7 @@
               BrakeBias: Object(Dn.a)("Brake Bias:"),
               EngineBraking: Object(Dn.a)("Engine Braking:"),
               EngineMap: Object(Dn.a)("Engine Map:"),
+			  Abs: Object(Dn.a)("ABS:"),
             }),
             (a.penaltyTimes = {
               DriveThrough: 0,
@@ -87584,7 +87452,9 @@
               PitStop: 0,
               TimeDeduction: 0,
               SlowDown: 0,
-            }),
+            }),			
+			(a.slowDownStartTime = null),  // slowdown start timestamp
+			(a.slowDownRemaining = 60),    // slowdown timer seconds to countdown			
             (a.penaltyTexts = {
               DriveThrough: Object(Dn.a)("Drive Through Penalty"),
               StopAndGo: Object(Dn.a)("Stop And Go Penalty"),
@@ -87606,7 +87476,8 @@
             (a.isHillClimb = !1),
             (a.lapDistance = -1),
             (a.pitEntrance = -1),
-            (a.pitDistance = -1),
+            (a.pitDistance = -1),			
+			// ---- UPDATE METHOD ----
             (a.update = function() {
               if (
                 (Ss && 33 <= In.c - a.lastCheck) ||
@@ -87629,6 +87500,8 @@
                       SlowDown: 0,
                     } :
                     In.a.data.Penalties),
+				  // Corrige comportamento DriveThrough: RaceRoom envia 0=ativo, -1=inativo
+				  (a.penalties && typeof a.penalties.DriveThrough !== "undefined" && (a.penalties.DriveThrough = a.penalties.DriveThrough === 0 ? 1 : 0)),
                   (a.completedLaps = In.a.data.CompletedLaps),
                   (a.lapTimeBestSelf = In.a.data.LapTimeBestSelf),
                   (a.notInRace = a.sessionType !== Ia.Race),
@@ -87637,9 +87510,7 @@
                       (0 < a.completedLaps ||
                         a.isLeaderboard ||
                         0 === In.a.data.LapValidState)) ||
-                    (a.sessionType === Ia.Qualify &&
-                      a.lapTimeBestSelf === T.a) ||
-                    a.isHillClimb),
+                    (a.sessionType === Ia.Qualify && a.lapTimeBestSelf === T.a) || a.isHillClimb),
                   (a.showLapInvalid = a.notInRace && !a.hasValidLap),
                   (a.showNextLapInvalid =
                     a.notInRace && 2 === In.a.data.LapValidState),
@@ -87708,7 +87579,13 @@
                     ].PenaltyReason),
                   a.penalties.SlowDown <= 0 &&
                   0 !== a.penaltyTimes.SlowDown &&
-                  (a.penaltyTimes.SlowDown = 0),
+                  (a.penaltyTimes.SlowDown = 0),					
+				// --- SlowDown controller (real-time 60s)
+				In.a?.data?.Penalties?.SlowDown !== -1
+				  ? (!a.slowDownStartTime
+					  ? ((a.slowDownStartTime = Date.now()), (a.slowDownRemaining = 60))
+					  : (a.slowDownRemaining = Math.max(0, 60 - (Date.now() - a.slowDownStartTime) / 1000)))
+				  : ((a.slowDownStartTime = null), (a.slowDownRemaining = 60)),				  
                   (a.eTimes.PitRequest =
                     1 === In.a.data.PitState && In.a.data.InPitlane < 1 ?
                     In.c + 1e3 :
@@ -87733,6 +87610,13 @@
                   (-99 !== a.eValues.EngineBraking &&
                     (a.eTimes.EngineBraking = In.c + 5e3),
                     (a.eValues.EngineBraking = n));
+					
+				var w = In.a.data.AbsSetting;
+                w !== a.eValues.Abs &&
+                  (-99 !== a.eValues.Abs &&
+                    (a.eTimes.Abs = In.c + 5e3),
+                    (a.eValues.Abs = w));	
+					
                 var r = In.a.data.EngineMapSetting;
                 (r !== a.eValues.EngineMap &&
                   (-99 !== a.eValues.EngineMap &&
@@ -87842,20 +87726,29 @@
                     );
                 }
                 break;
-              case "SlowDown":
-                switch (t) {
-                  case 1:
-                    n = Object(Dn.a)("Reason: Track Limits Abuse");
-                    break;
-                  case 2:
-                    n = Object(Dn.a)("Reason: Multiple Track Limit Abuse");
-                    break;
-                  case 3:
-                    n = Object(Dn.a)(
-                      "Reason: Accumulating the Maximum Number of Penalties Permitted",
-                    );
-                }
-                break;
+			case "SlowDown":
+			  switch (t) {
+				case 1:
+				  n = Object(Dn.a)("Reason: Track Limits");
+				  break;
+				case 2:
+				  n = Object(Dn.a)("Reason: Multiple Track Limit Abuse");
+				  break;
+				case 3:
+				  n = Object(Dn.a)("Reason: Accumulating the Maximum Number of Penalties Permitted");
+				  break;
+				default:
+				  n = Object(Dn.a)("Reason: Slow Down Penalty");
+			  }
+			  // Show time to give back
+			  if (In.a?.data?.Penalties?.SlowDown && In.a.data.Penalties.SlowDown > 0) {
+				n += " (" + In.a.data.Penalties.SlowDown.toFixed(2) + "s to give back)";
+			  }
+			  // Show 60s timer
+			  if (this.slowDownStartTime) {
+				n += " | " + this.slowDownRemaining.toFixed(0) + "s left";
+			  }
+			  break;
               case "Disqualify":
                 switch (t) {
                   case 0:
@@ -88374,7 +88267,7 @@
             (n.gear = 0),
             (n.limiter = !1),
             (n.engineMap = 0),
-            (n.engineBrake = 0),
+            (n.abs = 0),
             (n.tractionLevel = 0),
             (n.brakeBias = 0),
             (n.gearNameLookup = {}),
@@ -88454,7 +88347,7 @@
                   (n.gear = In.a.data.Gear),
                   (n.limiter = 0 < In.a.data.PitLimiter && 0 < n.engineState),
                   (n.engineMap = In.a.data.EngineMapSetting),
-                  (n.engineBrake = In.a.data.EngineBrakeSetting),
+				  (n.abs = In.a.data.AbsSetting),
                   (n.brakeBias = In.a.data.BrakeRaw === 0 ? 100 - 100 * In.a.data.BrakeBias : n.brakeBias),
                   (n.tractionLevel = In.a.data.TractionControlSetting),
                   (n.sessionType = In.a.data.SessionType),
@@ -88608,32 +88501,32 @@
               e &&
               (Zs ||
                 (this.playerIsFocus &&
-                  -1 !== this.engineBrake &&
+                  -1 !== this.abs &&
                   0 < this.engineState)) &&
               ft.a.createElement(
                 "div", {
-                  className: "engineBrakeBox",
+                  className: "absBox",
                   style: {
                     background: this.engineState < 1 && !Zs ? "black" : void 0,
                   },
                 },
                 ft.a.createElement(
                   "div", {
-                    className: "engineBrakeLabel mono",
+                    className: "absLabel mono",
                     style: {
                       color: 0 < this.engineState || Zs ? "white" : "silver",
                     },
                   },
-                  "EB:",
+                  "ABS:",
                 ),
                 ft.a.createElement(
                   "div", {
-                    className: "engineBrake mono",
+                    className: "abs mono",
                     style: {
                       color: 0 < this.engineState || Zs ? "white" : "silver",
                     },
                   },
-                  "" + (-1 !== this.engineBrake ? this.engineBrake : 3),
+                  "" + (-1 !== this.abs ? this.abs : 3),
                 ),
               ),
               this.props.settings.subSettings.showECU.enabled &&
@@ -88742,7 +88635,7 @@
           Ii([pt.k], e.prototype, "gear", void 0),
           Ii([pt.k], e.prototype, "limiter", void 0),
           Ii([pt.k], e.prototype, "engineMap", void 0),
-          Ii([pt.k], e.prototype, "engineBrake", void 0),
+          Ii([pt.k], e.prototype, "abs", void 0),
           Ii([pt.k], e.prototype, "tractionLevel", void 0),
           Ii([pt.k], e.prototype, "brakeBias", void 0),
           Ii([pt.k], e.prototype, "lastCheck", void 0),
@@ -94768,29 +94661,231 @@
         {X: -1100.80432, Y: 28.1907711, Z: -574.55365,},
         {X: -1086.35327, Y: 28.28109, Z: -580.8057,},
         ],
+		12500: [
+		{X: -23.45129, Y: 0.3927424, Z: 44.73859,},
+		{X: -11.68899, Y: 0.3839393, Z: 59.77585,},
+		{X: 0.1322557, Y: 0.275934, Z: 74.92525,},
+		{X: 11.60244, Y: 0.3797332, Z: 89.51397,},
+		{X: 23.59693, Y: 0.3925977, Z: 104.7627,},
+		{X: 35.2336, Y: 0.358155, Z: 119.4384,},
+		{X: 47.39324, Y: 0.3663567, Z: 134.8184,},
+		{X: 59.50336, Y: 0.2888618, Z: 150.1053,},
+		{X: 70.89206, Y: 0.38188, Z: 164.6644,},
+		{X: 82.52005, Y: 0.274777, Z: 179.2243,},
+		{X: -23.45129, Y: 0.3927424, Z: 44.73859,},
+		{X: -11.68899, Y: 0.3839393, Z: 59.77585,},
+		{X: 0.1322557, Y: 0.275934, Z: 74.92525,},
+		{X: 11.60244, Y: 0.3797332, Z: 89.51397,},
+		{X: 23.59693, Y: 0.3925977, Z: 104.7627,},
+		{X: 35.2336, Y: 0.358155, Z: 119.4384,},
+		{X: 47.39324, Y: 0.3663567, Z: 134.8184,},
+		{X: 59.50336, Y: 0.2888618, Z: 150.1053,},
+		{X: 70.89206, Y: 0.38188, Z: 164.6644,},
+		{X: 82.52005, Y: 0.274777, Z: 179.2243,},
+		{X: -23.45129, Y: 0.3927424, Z: 44.73859,},
+		{X: -11.68899, Y: 0.3839393, Z: 59.77585,},
+		{X: 0.1322557, Y: 0.275934, Z: 74.92525,},
+		{X: 11.60244, Y: 0.3797332, Z: 89.51397,},
+		{X: 23.59693, Y: 0.3925977, Z: 104.7627,},
+		{X: 35.2336, Y: 0.358155, Z: 119.4384,},
+		{X: 47.39324, Y: 0.3663567, Z: 134.8184,},
+		{X: 59.50336, Y: 0.2888618, Z: 150.1053,},
+		{X: 70.89206, Y: 0.38188, Z: 164.6644,},
+		{X: 82.52005, Y: 0.274777, Z: 179.2243,},
+		{X: -23.45129, Y: 0.3927424, Z: 44.73859,},
+		{X: -11.68899, Y: 0.3839393, Z: 59.77585,},
+		{X: 0.1322557, Y: 0.275934, Z: 74.92525,},
+		{X: 11.60244, Y: 0.3797332, Z: 89.51397,},
+		{X: 23.59693, Y: 0.3925977, Z: 104.7627,},
+		{X: 35.2336, Y: 0.358155, Z: 119.4384,},		
+        ],
+		12420: [
+		{X: -23.50904, Y: 0.3837916, Z: 44.62206,},
+		{X: -11.73623, Y: 0.2985728, Z: 59.70354,},
+		{X: 0.1902351, Y: 0.3786877, Z: 74.96089,},
+		{X: 11.60257, Y: 0.3796677, Z: 89.51135,},
+		{X: 23.60303, Y: 0.3729036, Z: 104.7737,},
+		{X: 35.2691, Y: 0.3798989, Z: 119.4852,},
+		{X: 47.36423, Y: 0.3628709, Z: 134.7433,},
+		{X: 59.63631, Y: 0.3752464, Z: 150.2903,},
+		{X: 70.85872, Y: 0.3769357, Z: 164.6111,},
+		{X: 82.57639, Y: 0.3818313, Z: 179.6412,},
+		{X: -23.50904, Y: 0.3837916, Z: 44.62206,},
+		{X: -11.73623, Y: 0.2985728, Z: 59.70354,},
+		{X: 0.1902351, Y: 0.3786877, Z: 74.96089,},
+		{X: 11.60257, Y: 0.3796677, Z: 89.51135,},
+		{X: 23.60303, Y: 0.3729036, Z: 104.7737,},
+		{X: 35.2691, Y: 0.3798989, Z: 119.4852,},
+		{X: 47.36423, Y: 0.3628709, Z: 134.7433,},
+		{X: 59.63631, Y: 0.3752464, Z: 150.2903,},
+		{X: 70.85872, Y: 0.3769357, Z: 164.6111,},
+		{X: 82.57639, Y: 0.3818313, Z: 179.6412,},
+		{X: -23.50904, Y: 0.3837916, Z: 44.62206,},
+		{X: -11.73623, Y: 0.2985728, Z: 59.70354,},
+		{X: 0.1902351, Y: 0.3786877, Z: 74.96089,},
+		{X: 11.60257, Y: 0.3796677, Z: 89.51135,},
+		{X: 23.60303, Y: 0.3729036, Z: 104.7737,},
+		{X: 35.2691, Y: 0.3798989, Z: 119.4852,},
+		{X: 47.36423, Y: 0.3628709, Z: 134.7433,},
+		{X: 59.63631, Y: 0.3752464, Z: 150.2903,},
+		{X: 70.85872, Y: 0.3769357, Z: 164.6111,},
+		{X: 82.57639, Y: 0.3818313, Z: 179.6412,},
+		{X: -23.50904, Y: 0.3837916, Z: 44.62206,},
+		{X: -11.73623, Y: 0.2985728, Z: 59.70354,},
+		{X: 0.1902351, Y: 0.3786877, Z: 74.96089,},
+		{X: 11.60257, Y: 0.3796677, Z: 89.51135,},
+		{X: 23.60303, Y: 0.3729036, Z: 104.7737,},
+		{X: 35.2691, Y: 0.3798989, Z: 119.4852,},
+        ],
+		12938: [
+		{X: -205.8191, Y: 5.044841, Z: -433.709,},		
+		{X: -196.1398, Y: 4.947697, Z: -433.6837,},		
+		{X: -185.9383, Y: 4.878621, Z: -433.7197,},		
+		{X: -175.8765, Y: 4.787236, Z: -433.6891,},		
+		{X: -165.3189, Y: 4.712976, Z: -433.7155,},		
+		{X: -155.8304, Y: 4.648216, Z: -433.7148,},		
+		{X: -145.9076, Y: 4.571619, Z: -433.7446,},		
+		{X: -136.4295, Y: 4.511189, Z: -433.7305,},		
+		{X: -125.5686, Y: 4.420063, Z: -433.7961,},		
+		{X: -115.5071, Y: 4.327212, Z: -433.7812,},		
+		{X: -106.0359, Y: 4.271501, Z: -433.7943,},		
+		{X: -95.77029, Y: 4.269052, Z: -433.9974,},		
+		{X: -75.93363, Y: 4.163921, Z: -434.0276,},		
+		{X: -86.0125, Y: 4.212397, Z: -434.0024,},		
+		{X: -65.78572, Y: 4.107386, Z: -434.0253,},		
+		{X: -56.29632, Y: 4.046636, Z: -434.0041,},		
+		{X: -46.0289, Y: 3.982317, Z: -434.1395,},		
+		{X: -35.99821, Y: 3.931678, Z: -434.1507,},		
+		{X: -26.34106, Y: 3.880085, Z: -434.1596,},		
+		{X: -15.99073, Y: 3.833251, Z: -434.1887,},		
+		{X: -5.8507, Y: 3.772048, Z: -434.2189,},
+		{X: -205.8191, Y: 5.044841, Z: -433.709,},		
+		{X: -196.1398, Y: 4.947697, Z: -433.6837,},		
+		{X: -185.9383, Y: 4.878621, Z: -433.7197,},		
+		{X: -175.8765, Y: 4.787236, Z: -433.6891,},		
+		{X: -165.3189, Y: 4.712976, Z: -433.7155,},		
+		{X: -155.8304, Y: 4.648216, Z: -433.7148,},		
+		{X: -145.9076, Y: 4.571619, Z: -433.7446,},		
+		{X: -136.4295, Y: 4.511189, Z: -433.7305,},		
+		{X: -125.5686, Y: 4.420063, Z: -433.7961,},		
+		{X: -115.5071, Y: 4.327212, Z: -433.7812,},		
+		{X: -106.0359, Y: 4.271501, Z: -433.7943,},		
+		{X: -95.77029, Y: 4.269052, Z: -433.9974,},		
+		{X: -75.93363, Y: 4.163921, Z: -434.0276,},		
+		{X: -86.0125, Y: 4.212397, Z: -434.0024,},		
+		{X: -65.78572, Y: 4.107386, Z: -434.0253,},		
+        ],
+		10394: [
+		{X: 18.62747, Y: 0.4398357, Z: -13.90767,},
+		{X: 26.75981, Y: 0.5883489, Z: -15.15851,},
+		{X: 35.83693, Y: 0.7523322, Z: -16.85818,},
+		{X: 44.77673, Y: 0.897311, Z: -18.59606,},
+		{X: 53.9039, Y: 1.079644, Z: -20.3557,},
+		{X: 62.59137, Y: 1.239997, Z: -22.04963,},
+		{X: 71.50602, Y: 1.436183, Z: -23.78385,},
+		{X: 80.48395, Y: 1.609313, Z: -25.5574,},
+		{X: 89.37907, Y: 1.775697, Z: -27.2442,},
+		{X: 98.28764, Y: 1.957622, Z: -29.03117,},
+		{X: 107.224, Y: 2.146733, Z: -30.61447,},
+		{X: 116.1207, Y: 2.316493, Z: -32.43042,},
+		{X: 18.62747, Y: 0.4398357, Z: -13.90767,},
+		{X: 26.75981, Y: 0.5883489, Z: -15.15851,},
+		{X: 35.83693, Y: 0.7523322, Z: -16.85818,},
+		{X: 44.77673, Y: 0.897311, Z: -18.59606,},
+		{X: 53.9039, Y: 1.079644, Z: -20.3557,},
+		{X: 62.59137, Y: 1.239997, Z: -22.04963,},
+		{X: 71.50602, Y: 1.436183, Z: -23.78385,},
+		{X: 80.48395, Y: 1.609313, Z: -25.5574,},
+		{X: 89.37907, Y: 1.775697, Z: -27.2442,},
+		{X: 98.28764, Y: 1.957622, Z: -29.03117,},
+		{X: 107.224, Y: 2.146733, Z: -30.61447,},
+		{X: 116.1207, Y: 2.316493, Z: -32.43042,},
+		{X: 18.62747, Y: 0.4398357, Z: -13.90767,},
+		{X: 26.75981, Y: 0.5883489, Z: -15.15851,},
+		{X: 35.83693, Y: 0.7523322, Z: -16.85818,},
+		{X: 44.77673, Y: 0.897311, Z: -18.59606,},
+		{X: 53.9039, Y: 1.079644, Z: -20.3557,},
+		{X: 62.59137, Y: 1.239997, Z: -22.04963,},
+		{X: 71.50602, Y: 1.436183, Z: -23.78385,},
+		{X: 80.48395, Y: 1.609313, Z: -25.5574,},
+		{X: 89.37907, Y: 1.775697, Z: -27.2442,},
+		{X: 98.28764, Y: 1.957622, Z: -29.03117,},
+		{X: 107.224, Y: 2.146733, Z: -30.61447,},
+        ],
+		10725: [
+		{X: 18.18524, Y: 0.4079036, Z: -13.6333,},
+		{X: 26.76047, Y: 0.588551, Z: -15.16933,},
+		{X: 35.87172, Y: 0.752875, Z: -16.86785,},
+		{X: 44.77016, Y: 0.8971145, Z: -18.57268,},
+		{X: 53.65951, Y: 1.018853, Z: -20.33364,},
+		{X: 62.66906, Y: 1.241319, Z: -22.07608,},
+		{X: 71.52221, Y: 1.436081, Z: -23.76672,},
+		{X: 80.75087, Y: 1.626541, Z: -25.59719,},
+		{X: 89.36817, Y: 1.761976, Z: -27.26138,},
+		{X: 98.30294, Y: 1.954063, Z: -29.04673,},
+		{X: 107.3398, Y: 2.155482, Z: -30.64706,},
+		{X: 116.1126, Y: 2.323765, Z: -32.46672,},
+		{X: 18.18524, Y: 0.4079036, Z: -13.6333,},
+		{X: 26.76047, Y: 0.588551, Z: -15.16933,},
+		{X: 35.87172, Y: 0.752875, Z: -16.86785,},
+		{X: 44.77016, Y: 0.8971145, Z: -18.57268,},
+		{X: 53.65951, Y: 1.018853, Z: -20.33364,},
+		{X: 62.66906, Y: 1.241319, Z: -22.07608,},
+		{X: 71.52221, Y: 1.436081, Z: -23.76672,},
+		{X: 80.75087, Y: 1.626541, Z: -25.59719,},
+		{X: 89.36817, Y: 1.761976, Z: -27.26138,},
+		{X: 98.30294, Y: 1.954063, Z: -29.04673,},
+		{X: 107.3398, Y: 2.155482, Z: -30.64706,},
+		{X: 116.1126, Y: 2.323765, Z: -32.46672,},
+		{X: 18.18524, Y: 0.4079036, Z: -13.6333,},
+		{X: 26.76047, Y: 0.588551, Z: -15.16933,},
+		{X: 35.87172, Y: 0.752875, Z: -16.86785,},
+		{X: 44.77016, Y: 0.8971145, Z: -18.57268,},
+		{X: 53.65951, Y: 1.018853, Z: -20.33364,},
+		{X: 62.66906, Y: 1.241319, Z: -22.07608,},
+		{X: 71.52221, Y: 1.436081, Z: -23.76672,},
+		{X: 80.75087, Y: 1.626541, Z: -25.59719,},
+		{X: 89.36817, Y: 1.761976, Z: -27.26138,},
+		{X: 98.30294, Y: 1.954063, Z: -29.04673,},
+		{X: 107.3398, Y: 2.155482, Z: -30.64706,},
+        ],
 		10463: [
-		{X: -336.37, Y: 15.72, Z: -426.012,},
-        {X: -339.71, Y: 15.71, Z: -413.25,},
-        {X: -342.61, Y: 15.70, Z: -401.61,},
-        {X: -345.58, Y: 15.71, Z: -389.95,},
-        {X: -348.46, Y: 15.72, Z: -378.23,},
-        {X: -351.42, Y: 15.73, Z: -366.58,},
-        {X: -354.28, Y: 15.74, Z: -355.01,},
-        {X: -357.25, Y: 15.75, Z: -343.17,},
-        {X: -360.21, Y: 15.75, Z: -331.54,},
-        {X: -363.14, Y: 15.75, Z: -320.019,},
-        {X: -366.044, Y: 15.75, Z: -308.25,},
-        {X: -368.98, Y: 15.75, Z: -296.57,},
-        {X: -371.92, Y: 15.75, Z: -284.94,},
-        {X: -374.82, Y: 15.76, Z: -273.26,},
-        {X: -377.75, Y: 15.76, Z: -261.62,},
-        {X: -380.64, Y: 15.74, Z: -250.098,},
-        {X: -383.66, Y: 15.71, Z: -238.22,},
-        {X: -386.64, Y: 15.68, Z: -226.57,},
-        {X: -389.62, Y: 15.65, Z: -214.90,},
-        {X: -392.57, Y: 15.62, Z: -203.30,},
-        {X: -395.62, Y: 15.58, Z: -191.55,},
-        {X: -398.50, Y: 15.56, Z: -180.18,},
+		{X: -337.3617, Y: 15.82997, Z: -423.3378,},			
+		{X: -339.9062, Y: 15.79607, Z: -413.0908,},			
+		{X: -342.9642, Y: 15.81195, Z: -400.9825,},			
+		{X: -345.7534, Y: 15.79995, Z: -389.7161,},			
+		{X: -348.7082, Y: 15.81479, Z: -377.8701,},			
+		{X: -351.6458, Y: 15.82688, Z: -366.1817,},			
+		{X: -354.6219, Y: 15.82636, Z: -354.4312,},			
+		{X: -357.5832, Y: 15.81884, Z: -342.603,},			
+		{X: -360.4315, Y: 15.84102, Z: -331.2083,},			
+		{X: -363.2836, Y: 15.83927, Z: -319.7332,},			
+		{X: -366.2516, Y: 15.8374, Z: -307.8364,},			
+		{X: -369.1311, Y: 15.83886, Z: -296.3674,},			
+		{X: -372.1446, Y: 15.84267, Z: -284.5118,},			
+		{X: -375.0872, Y: 15.85583, Z: -272.7732,},			
+		{X: -378.0292, Y: 15.84486, Z: -261.0551,},			
+		{X: -380.9326, Y: 15.8249, Z: -249.5508,},			
+		{X: -383.9246, Y: 15.79251, Z: -237.6968,},			
+		{X: -386.851, Y: 15.77211, Z: -226.1255,},			
+		{X: -389.832, Y: 15.67229, Z: -214.414,},			
+		{X: -392.8098, Y: 15.70761, Z: -202.877,},			
+		{X: -395.7875, Y: 15.67513, Z: -191.2585,},			
+		{X: -398.9017, Y: 15.65357, Z: -179.5085,},
+		{X: -337.3617, Y: 15.82997, Z: -423.3378,},			
+		{X: -339.9062, Y: 15.79607, Z: -413.0908,},			
+		{X: -342.9642, Y: 15.81195, Z: -400.9825,},			
+		{X: -345.7534, Y: 15.79995, Z: -389.7161,},			
+		{X: -348.7082, Y: 15.81479, Z: -377.8701,},			
+		{X: -351.6458, Y: 15.82688, Z: -366.1817,},			
+		{X: -354.6219, Y: 15.82636, Z: -354.4312,},			
+		{X: -357.5832, Y: 15.81884, Z: -342.603,},			
+		{X: -360.4315, Y: 15.84102, Z: -331.2083,},			
+		{X: -363.2836, Y: 15.83927, Z: -319.7332,},			
+		{X: -366.2516, Y: 15.8374, Z: -307.8364,},			
+		{X: -369.1311, Y: 15.83886, Z: -296.3674,},			
+		{X: -372.1446, Y: 15.84267, Z: -284.5118,},			
+		{X: -375.0872, Y: 15.85583, Z: -272.7732,},
         ],
       };
     var zi,
@@ -98352,8 +98447,8 @@
                       fontWeight: Ls ? void 0 : "bold",
                     },
                   },
-                  (Zs ? 2.22 : r.rankingData.Rating.toFixed(0)) +
-                  " / " +
+                  (Zs ? 2.22 : (r.rankingData.Rating / 1e3).toFixed(2)) +
+                  "K / " +
                   (Zs ? 94.6 : r.rankingData.Reputation.toFixed(1)),
                 ),
                 this.props.relative &&
@@ -102085,8 +102180,8 @@
                       fontWeight: Ps ? void 0 : "bold",
                     },
                   },
-                  (Zs ? 2.22 : i.rankingData.Rating.toFixed(0)) +
-                  " / " +
+                  (Zs ? 2.22 : (i.rankingData.Rating / 1e3).toFixed(2)) +
+                  "K / " +
                   (Zs ? 94.6 : i.rankingData.Reputation.toFixed(1)),
                 ),
                 p &&
@@ -102684,7 +102779,7 @@
       Is = !1,
       _s = window.clientInformation.appVersion.toString().match(/64.0/),
       // ---- VERSION (HUD CURRENT VERSION) ----
-      Ms = 0.3,
+      Ms = 0.5,
       js = (function(t) {
         function e(e) {
           var u = t.call(this, e) || this;
@@ -104511,17 +104606,17 @@
                       Object(In.d)(u.updateFunction))));
             }),
             (u.getPositionRelative = function(e, t) {
-              if (!u.appRef.current)
-                return {
-                  x: 0,
-                  y: 0,
-                };
-              var n = u.appRef.current.getBoundingClientRect();
-              return {
-                x: (e - n.left * u.appZoom) / u.appZoom,
-                y: (t - n.top * u.appZoom) / u.appZoom,
-              };
-            }),
+			  if (!u.appRef.current)
+				return {
+				  x: 0,
+				  y: 0,
+				};
+			  var n = u.appRef.current.getBoundingClientRect();
+			  return {
+				x: (e - n.left) / u.appZoom,
+				y: (t - n.top) / u.appZoom,
+			  };
+			}),
             (u.onMouseDown = function(e) {
               var t = u.getWidgetId(e);
               if (t && (!u.lockHud || 2 === e.button))
@@ -104531,9 +104626,9 @@
                     var n = e.currentTarget.getBoundingClientRect(),
                       r = u.getPositionRelative(e.clientX, e.clientY),
                       a = u.getPositionRelative(
-                        n.left * u.appZoom,
-                        n.top * u.appZoom,
-                      );
+					  n.left,
+					  n.top,
+					);
                     u.currentCursorWidgetOffset = {
                       id: t,
                       x: a.x - r.x,
@@ -104553,9 +104648,9 @@
                   var n = e.currentTarget.getBoundingClientRect(),
                     r = u.getPositionRelative(e.clientX, e.clientY),
                     a = u.getPositionRelative(
-                      n.left * (u.appZoom / 2),
-                      n.top * (u.appZoom / 2),
-                    );
+					  n.left,
+					  n.top,
+					);
                   u.currentCursorWidgetOffset = {
                     id: t,
                     x: a.x - r.x,
@@ -105827,9 +105922,9 @@
                       ft.a.createElement(
                         "li",
                         null,
-                        "New images for starting lights.",
+                        "Raceinfo Widget - Fix for DriveThrough penalties",
                         ft.a.createElement("br", null),
-                        "PNG files for starting lights now are a bit more modern-looking.",
+                        "DriveThrough penalties were not working due to a failure to read data from the new API. Now it's fixed!",
                         ft.a.createElement("br", null),
                       ),
                     ),
@@ -105840,9 +105935,61 @@
                       ft.a.createElement(
                         "li",
                         null,
-                        "Fix for multiplayer data.",
+                        "Raceinfo Widget - Fix for SlowDown info",
                         ft.a.createElement("br", null),
-                        "HUD was failing to retrieve data from Raceroom. This is used by Strength of Field info and by TV Tower as well.",
+                        "Slow down penalties now display both the time to give back and the time remaining to serve the penalty.",
+                        ft.a.createElement("br", null),
+                      ),
+                    ),
+					
+					ft.a.createElement(
+                      "ul",
+                      null,
+                      ft.a.createElement(
+                        "li",
+                        null,
+                        "Raceinfo Widget - ABS",
+                        ft.a.createElement("br", null),
+                        "Widget now displays ABS level changes.",
+                        ft.a.createElement("br", null),
+                      ),
+                    ),
+					
+					ft.a.createElement(
+                      "ul",
+                      null,
+                      ft.a.createElement(
+                        "li",
+                        null,
+                        "Motec wdiget - ABS",
+                        ft.a.createElement("br", null),
+                        "Motec now displays ABS level changes.",
+                        ft.a.createElement("br", null),
+                      ),
+                    ),
+					
+					ft.a.createElement(
+                      "ul",
+                      null,
+                      ft.a.createElement(
+                        "li",
+                        null,
+                        "New radar graph",
+                        ft.a.createElement("br", null),
+                        "Radar now uses an SVG format for better image quality. Thanks to Mad Day Man (the LEGO guy) for the art.",
+                        ft.a.createElement("br", null),
+                      ),
+                    ),
+					
+					ft.a.createElement(
+                      "ul",
+                      null,
+                      ft.a.createElement(
+                        "li",
+                        null,
+                        "Styles",
+                        ft.a.createElement("br", null),
+                        "Some tweaks on fonts and shadows to make it look cleaner.",
                         ft.a.createElement("br", null),
                       ),
                     ),
@@ -106015,9 +106162,13 @@
                     ),
                     ft.a.createElement("br", null),
                     ft.a.createElement("br", null),
-                    "If you encounter any sort of problems, have questions or a suggestion, feel free to post in the Forum-Thread!.",
+                    "If you encounter any sort of problems, have questions or a suggestion, feel free to post in the Forum-Thread!",
                     ft.a.createElement("br", null),
                     "HUGE THANKS to everyone on the forum who has been reporting bugs and helping improve this HUD.",
+                    ft.a.createElement("br", null),
+                    "**ATENTION**: Starting December 1, 2025, SealHud will ONLY be available at https://sealhud.github.io/. The 'dsjunges83' repository will no longer work. Make sure you set the correct parameter in the Steam launcher:",
+					ft.a.createElement("br", null),
+                    "-webHudUrl=https://sealhud.github.io/",
                     ft.a.createElement("br", null),
                     ft.a.createElement("br", null),
                     "SealHud is free to use and it's based on OtterHud.",
@@ -106025,9 +106176,13 @@
                     "We didn't create this HUD, we're just trying to maintain it. Consider donating to the creator's Coffee Fund.",
                     ft.a.createElement("br", null),
                     ft.a.createElement("br", null),
-                    "As said by Otter: Moo!",
+                    "As once said by Otter: Moo!",
                     ft.a.createElement("br", null),
-                    "SealHUD Team",
+                    "SealHUD Team:",
+					ft.a.createElement("br", null),
+                    "- Diego Junges",
+					ft.a.createElement("br", null),
+                    "- Pedro Santana",
                   ),
                   ft.a.createElement(
                     "div", {
@@ -106238,32 +106393,6 @@
               this.settings.graphs.enabled &&
               ft.a.createElement(mi, {
                 opacity: this.settingsOpacity,
-              }),
-            );
-          }),
-          (e.prototype.getRanking = function() {
-            return ft.a.createElement(
-              "div", {
-                className: "rankingSite",
-                style: {
-                  position: "absolute",
-                  width: "1920px",
-                  height: "1080px",
-                  zoom: "1",
-                  top: "50%",
-                  left: "50%",
-                  transform: "translate(-50%, -50%)",
-                  cursor: "auto",
-                },
-              },
-              ft.a.createElement("iframe", {
-                className: "rankingSiteFrame",
-                src: this.rankingUrl,
-                style: {
-                  width: "1920px",
-                  height: "1080px",
-                  cursor: "auto",
-                },
               }),
             );
           }),
@@ -112740,9 +112869,9 @@
       engineMapBox: "engineMapBox",
       engineMapLabel: "engineMapLabel",
       engineMap: "engineMap",
-      engineBrakeBox: "engineBrakeBox",
-      engineBrakeLabel: "engineBrakeLabel",
-      engineBrake: "engineBrake",
+      absBox: "absBox",
+      absLabel: "absLabel",
+      abs: "abs",
       tractionLevelBox: "tractionLevelBox",
       tractionLevelLabel: "tractionLevelLabel",
       tractionLevel: "tractionLevel",
